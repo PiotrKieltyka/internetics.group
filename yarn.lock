@@ -1611,9 +1611,9 @@
   integrity sha512-zrNj1+yqYF4WskCMOHwN+w9iuD12+dGm0rQ35HLl9/Ouuq52cEtd0CH9qMgrdNmi5ejC1/V7vKEXYubB+65DkA==
 
 "@types/node@^12.11.1":
-  version "12.20.15"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.20.15.tgz#10ee6a6a3f971966fddfa3f6e89ef7a73ec622df"
-  integrity sha512-F6S4Chv4JicJmyrwlDkxUdGNSplsQdGwp1A0AJloEVDirWdZOAiRHhovDlsFkKUrquUXhz1imJhXHsf59auyAg==
+  version "12.20.16"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.20.16.tgz#1acf34f6456208f495dac0434dd540488d17f991"
+  integrity sha512-6CLxw83vQf6DKqXxMPwl8qpF8I7THFZuIwLt4TnNsumxkp1VsRZWT8txQxncT/Rl2UojTsFzWgDG4FRMwafrlA==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -4886,9 +4886,9 @@ karma-coverage@~2.0.3:
     minimatch "^3.0.4"
 
 karma-jasmine-html-reporter@^1.5.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/karma-jasmine-html-reporter/-/karma-jasmine-html-reporter-1.6.0.tgz#586e17025a1b4128e9fba55d5f1e8921bfc3bc1e"
-  integrity sha512-ELO9yf0cNqpzaNLsfFgXd/wxZVYkE2+ECUwhMHUD4PZ17kcsPsYsVyjquiRqyMn2jkd2sHt0IeMyAyq1MC23Fw==
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/karma-jasmine-html-reporter/-/karma-jasmine-html-reporter-1.7.0.tgz#52c489a74d760934a1089bfa5ea4a8fcb84cc28b"
+  integrity sha512-pzum1TL7j90DTE86eFt48/s12hqwQuiD+e5aXx2Dc9wDEn2LfGq6RoAxEZZjFiN0RDSCOnosEKRZWxbQ+iMpQQ==
 
 karma-jasmine@~4.0.0:
   version "4.0.1"
