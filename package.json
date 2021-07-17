@@ -1,12 +1,24 @@
 {
   "name": "internetics-group",
+  "contributors": [
+    {
+      "name": "Piotr Kieltyka",
+      "email": "p.kieltyka+github@gmail.com"
+    },
+    {
+      "name": "Piotr Szczechowski",
+      "email": "piotr.szczechowski.it+github@gmail.com"
+    }
+  ],
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "NODE_ENV=production ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "format": "npx prettier --write ."
   },
   "private": true,
   "dependencies": {
