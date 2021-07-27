@@ -8,6 +8,8 @@ import { TeamComponent } from './team/team.component';
 import { ContactComponent } from './contact/contact.component';
 import { TermsComponent } from './terms/terms.component';
 import { HomeComponent } from './home/home.component';
+import { JumboComponent } from './home/jumbo/jumbo.component';
+import { ExamplesComponent } from './home/examples/examples.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HomeComponent } from './home/home.component';
     TeamComponent,
     ContactComponent,
     TermsComponent,
-    HomeComponent
+    HomeComponent,
+    JumboComponent,
+    ExamplesComponent
   ],
   imports: [
     BrowserModule,
