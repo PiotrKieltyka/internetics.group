@@ -2,15 +2,20 @@
   "NavAboutUs": "O nas",
   "NavTeam": "Team",
   "NavContact": "Kontakt",
-  "JumboHeader": "Internetycy to my!",
-  "WelcomeMessage": "Budujemy strony Internetowe. Wiemy jak działa Internet i jak się w nim pokazać. Zmieniamy Internet. Zmieniamy go razem z Tobą!",
+  "FirstJumboHeader": "Internetycy to my!",
+  "FirstWelcomeMessage": "Wiemy jak działa Internet i jak się w nim pokazać. Zmieniamy Internet. Zmieniamy go razem z Tobą!",
+  "SecondJumboHeader": "Budujemy strony.",
+  "SecondWelcomeMessage": "Naszym głównym celem jest zapewnić Tobie jak najłatwiejsze istnienie online. Nie tylko zbudujemy dla Ciebie stronę ale również nie zostawimy Cię samego, zadbamy o Twoje miejsce w Internecie, zapewnimy Ci wsparcie techniczne i aktualizacje oraz będziemy zarządzać Twoimi treściami w zamian za miesięczną opłatę",
   "English": "EN",
   "Polish": "PL",
   "ContactForm": "Formularz kontaktowy",
+  "ContactFormName": "Imię",
+  "ContactFormEmail": "Adres e-mail",
+  "ContactFormMessage": "Wiadomość",
   "FooAbout": "O nas",
   "FooTeam": "Team",
   "FooPricing": "Cennik",
   "FooContact": "Kontakt",
   "FooTerms": "Warunki",
-  "Reserved": "© 2021 Internetics.Group, Wszelkie prawa zastrzeżone."
+  "Reserved": "Wszelkie prawa zastrzeżone."
 }
