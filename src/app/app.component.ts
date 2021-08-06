@@ -12,7 +12,7 @@ export class AppComponent {
   constructor(
     private translateService: TranslateService,
   ) {
-    translateService.setDefaultLang('en');
+    translateService.setDefaultLang('pl');
   }
 
   switchLanguage(language: string) {
