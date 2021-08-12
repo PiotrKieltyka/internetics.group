@@ -1,8 +1,14 @@
 <div class="container flex flex-col pt-4 lg:flex-row lg:pt-8 justify-evenly items-center w-screen">
-  <div class="flex justify-center items-center" *ngFor="let person of team">
-    <div class="container mx-auto max-w-sm rounded-2xl overflow-hidden shadow-lg my-2 bg-white">
+  <div class="relative flex justify-center items-center" *ngFor="let person of team">
+    <div
+      class="absolute z-0 inset-0 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"
+      style="background: rgb(157,28,82); background: linear-gradient(45deg, var(--color-pink) 0%, var(--color-navy-blue) 45%, var(--color-yellow) 100%);">
+    </div>
+    <div
+      class="container z-10 mx-auto max-w-sm rounded-2xl overflow-hidden shadow-lg my-2 bg-white">
       <div class="relative z-10" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(85%));">
-        <img class="w-full h-96 object-cover filter brightness-75" src="{{person.imageUrl}}" alt="Profile image"/>
+        <img class="w-full h-96 object-cover filter brightness-75" src="{{person.imageUrl}}"
+             alt="Profile image"/>
         <div class="absolute" style="bottom: 20rem; left: 1rem;">
           <svg width="50" height="50" viewBox="0 0 50 50" class="mx-1">
             <g transform="matrix(0.11577112469433527,0,0,0.11577112469433527,-6.946267481660116,-1.2619052150050751)"
@@ -41,7 +47,8 @@
         <p class="flex items-center text-gray-400"><span
           class="inline-block w-3 h-3 bg-green-500 rounded-full mr-2"></span>online</p>
         <button
-          class="p-4 bg-red-600 rounded-full hover:bg-red-500 focus:bg-red-700 transition ease-in duration-200 focus:outline-none">
+          class="p-4 rounded-full hover:bg-red-500 focus:bg-red-700 transition ease-in duration-200 focus:outline-none"
+          style="background-color: var(--color-pink);">
           <svg viewBox="0 0 20 20" class="w-6 h-6">
             <path fill="#FFFFFF" d="M16,10c0,0.553-0.048,1-0.601,1H11v4.399C11,15.951,10.553,16,10,16c-0.553,0-1-0.049-1-0.601V11H4.601
                                     C4.049,11,4,10.553,4,10c0-0.553,0.049-1,0.601-1H9V4.601C9,4.048,9.447,4,10,4c0.553,0,1,0.048,1,0.601V9h4.399
@@ -59,15 +66,15 @@
       <div class="pb-4 uppercase text-center tracking-wide flex justify-around flex-col sm:flex-row">
         <div class="posts">
           <p class="text-gray-400 text-sm">Posts</p>
-          <p class="text-lg font-semibold text-blue-300">76</p>
+          <p class="text-lg font-semibold" style="color: var(--color-yellow);">76</p>
         </div>
         <div class="followers">
           <p class="text-gray-400 text-sm">Followers</p>
-          <p class="text-lg font-semibold text-blue-300">964</p>
+          <p class="text-lg font-semibold" style="color: var(--color-yellow);">964</p>
         </div>
         <div class="following">
           <p class="text-gray-400 text-sm">Following</p>
-          <p class="text-lg font-semibold text-blue-300">34</p>
+          <p class="text-lg font-semibold" style="color: var(--color-yellow);">34</p>
         </div>
       </div>
     </div>

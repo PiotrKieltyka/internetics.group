@@ -3,7 +3,18 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+:root {
+  --color-pink: #9d1c52;
+  --color-yellow: #ec8401;
+  --color-navy-blue: #0a152b;
+
+}
+
 html {
   --tw-bg-opacity: 1;
   background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+}
+
+body {
+  overflow-x: hidden;
 }
