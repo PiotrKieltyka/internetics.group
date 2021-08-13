@@ -13,6 +13,7 @@ import {ExamplesComponent} from './home/examples/examples.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import { PricingComponent } from './home/pricing/pricing.component';
 
 export function translateHttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -27,7 +28,8 @@ export function translateHttpLoaderFactory(http: HttpClient) {
     TermsComponent,
     HomeComponent,
     JumboComponent,
-    ExamplesComponent
+    ExamplesComponent,
+    PricingComponent
   ],
   imports: [
     BrowserModule,

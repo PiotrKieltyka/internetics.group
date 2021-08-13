@@ -10,6 +10,10 @@
   "Polish": "PL",
   "OurProjects": "Our works.",
   "AboutUsPage": "",
+  "MostPopular": "Most popular",
+  "Pricing": "Pricing plans.",
+  "monthly": "monthly",
+  "GetPlan": "Get this plan",
   "ContactForm": "Contact Form",
   "ContactFormName": "Name",
   "ContactFormEmail": "E-mail address",
@@ -21,6 +25,6 @@
   "FooBarContact": "Contact",
   "FooBarTerms": "Terms",
   "Reserved": "All rights reserved.",
-  "PKBio": "Information Technology Engineer with many years of experience in maintenance and deployment of hardware and software as well as software development. Dedicated developer with a passion for coding and problem solving.",
+  "PKBio": "Information Technology Engineer with many years of experience in maintenance and deployment of hardware and software as well as software development. Dedicated developer with a passion for coding, problem solving and learning new technologies. Self-motivated and strongly committed to work.",
   "PSzBio": "I am a person who still likes to improve. Thanks to the completed studies I have understood the basics of programming and I am still developing in this direction, creating projects that give me the opportunity to improve my programming competences."
 }
