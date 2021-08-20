@@ -1,8 +1,8 @@
 <!-- Nav Bar -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 <div class="w-screen flex flex-row items-center p-1 justify-between bg-gray-100 shadow-xs">
-  <div class="flex flex-row-reverse mr-4 ml-4 md:hidden px-5 py-5">
-    <i class="fas fa-bars"></i>
+  <div class="mr-4 ml-4 md:hidden px-2.5 py-5 w-screen">
+    <button (click)="switchNavbar()"><i class="fas fa-bars"></i></button>
   </div>
   <div routerLink="home"
        class="ml-8 text-lg text-gray-700 hidden md:flex hover:text-gray-900 cursor-pointer"
@@ -42,7 +42,7 @@
   <!--      <i class="fas fa-search m-3 mr-5 text-lg text-gray-700 w-4 h-4">-->
   <!--      </i>-->
   <!--    </span>-->
-  <div class="flex flex-row mr-8 hidden md:flex">
+  <nav class="flex flex-row mr-8 hidden md:flex">
     <div routerLink="aboutUs" routerLinkActive="active"
          class="text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer" translate>NavBarAboutUs
     </div>
@@ -57,8 +57,31 @@
       <span> / </span>
       <button class="text-sm" (click)="switchLanguage('en')">{{ 'English' | translate }}</button>
     </div>
-  </div>
+  </nav>
 </div>
+<nav *ngIf="visibleNavbar" class="flex flex-col justify-center items-center md:hidden">
+  <div routerLink="home" routerLinkActive="active"
+       class="text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer">
+    <svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+      <path fill="#0a152b"
+            d="M541 229.16l-61-49.83v-77.4a6 6 0 0 0-6-6h-20a6 6 0 0 0-6 6v51.33L308.19 39.14a32.16 32.16 0 0 0-40.38 0L35 229.16a8 8 0 0 0-1.16 11.24l10.1 12.41a8 8 0 0 0 11.2 1.19L96 220.62v243a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-128l64 .3V464a16 16 0 0 0 16 16l128-.33a16 16 0 0 0 16-16V220.62L520.86 254a8 8 0 0 0 11.25-1.16l10.1-12.41a8 8 0 0 0-1.21-11.27zm-93.11 218.59h.1l-96 .3V319.88a16.05 16.05 0 0 0-15.95-16l-96-.27a16 16 0 0 0-16.05 16v128.14H128V194.51L288 63.94l160 130.57z"></path>
+    </svg>
+  </div>
+  <div routerLink="aboutUs" routerLinkActive="active"
+       class="text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer" translate>NavBarAboutUs
+  </div>
+  <div routerLink="team" routerLinkActive="active"
+       class="text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer" translate>NavBarTeam
+  </div>
+  <div routerLink="contact" routerLinkActive="active"
+       class="text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer" translate>NavBarContact
+  </div>
+  <div class="text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer">
+    <button class="text-sm" (click)="switchLanguage('pl')">{{ 'Polish' | translate }}</button>
+    <span> / </span>
+    <button class="text-sm" (click)="switchLanguage('en')">{{ 'English' | translate }}</button>
+  </div>
+</nav>
 
 <!-- Content -->
 <router-outlet></router-outlet>
