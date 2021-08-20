@@ -7,7 +7,8 @@ import {TranslateService} from "@ngx-translate/core";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'internetics-group';
+  title = 'Internetics.Group';
+  visibleNavbar = false;
 
   constructor(
     private translateService: TranslateService,
@@ -15,8 +16,12 @@ export class AppComponent {
     translateService.setDefaultLang('pl');
   }
 
-  switchLanguage(language: string) {
+  switchLanguage(language: string): void {
     this.translateService.use(language);
+  }
+
+  switchNavbar(): void {
+    this.visibleNavbar = !this.visibleNavbar;
   }
 
 }
