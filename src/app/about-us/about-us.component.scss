@@ -1,0 +1,17 @@
+.container {
+  @media(min-width: 640px) {
+    background-image: url("/assets/aboutus-bg.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 155px;
+  }
+  @media(min-width: 1024px) {
+    background-position-x: 411px;
+  }
+  @media(min-width: 1280px) {
+    background-position-x: 666px;
+  }
+  @media(min-width: 1536px) {
+    background-position-x: 923px;
+  }
+}
