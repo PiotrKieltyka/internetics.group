@@ -1,27 +1,37 @@
-import {Component} from '@angular/core';
+import {AfterViewInit, Component} from '@angular/core';
+import {LoadImageService} from "../../services/load-image.service";
+import {HttpResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-jumbo',
   templateUrl: './jumbo.component.html',
   styleUrls: ['./jumbo.component.scss']
 })
-export class JumboComponent {
+export class JumboComponent implements AfterViewInit {
 
-  // changeStaticImagesToAnimations(): void {
-  //   const jumboImage1 = document.querySelector('#jumbo-image-1') as HTMLImageElement;
-  //   const jumboImage2 = document.querySelector('#jumbo-image-2') as HTMLImageElement;
-  //   const jumboGif1 = new Image();
-  //   const jumboGif2 = new Image();
-  //
-  //   jumboGif1.src = "./assets/video/HunanGSX/earth-zoom.webp";
-  //   jumboGif1.addEventListener('load', () => {
-  //     jumboImage1.src = jumboGif1.src;
-  //   })
-  //
-  //   jumboGif2.src = "./assets/video/HunanGSX/my-diamo-loop-2.webp";
-  //   jumboGif2.addEventListener('load', () => {
-  //     jumboImage2.src = jumboGif2.src;
-  //   })
-  // }
+  constructor(
+    private loadImageService: LoadImageService
+  ) {
+  }
 
+  ngAfterViewInit() {
+    const jumboImage1 = document.querySelector('#jumbo-image-1') as HTMLImageElement;
+    const jumboImage2 = document.querySelector('#jumbo-image-2') as HTMLImageElement;
+
+    if (this.checkFileName(jumboImage1.src) === 'earth-zoom-screen.webp') {
+      this.loadImageService.getImage('./assets/video/HunanGSX/earth-zoom.webp').subscribe((item: HttpResponse<ArrayBuffer>): void => {
+        jumboImage1.src = 'data:image/webp;base64,' + this.loadImageService.encodeArrayBufferToBase64(item.body!, 0, item.body?.byteLength!);
+      });
+    }
+    if (this.checkFileName(jumboImage2.src) === 'my-diamo-loop-screen.webp') {
+      this.loadImageService.getImage('./assets/video/HunanGSX/my-diamo-loop-2.webp').subscribe((item: HttpResponse<ArrayBuffer>) => {
+        jumboImage2.src = 'data:image/webp;base64,' + this.loadImageService.encodeArrayBufferToBase64(item.body!, 0, item.body?.byteLength!);
+      });
+    }
+  }
+
+  checkFileName(url: string) {
+    const arr = url.split('/');
+    return arr[arr.length - 1];
+  }
 }

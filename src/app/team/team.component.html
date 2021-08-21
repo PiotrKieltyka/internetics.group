@@ -8,7 +8,7 @@
     <div
       class="container z-10 mx-auto max-w-sm rounded-2xl overflow-hidden shadow-lg my-2 bg-white">
       <div class="relative z-10" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(85%));">
-        <img class="w-full h-96 object-cover filter brightness-75" src="{{person.imageUrl}}" loading="lazy"
+        <img class="w-full h-96 object-cover filter brightness-75" src="{{person.imageUrl}}"
              alt="Profile image"/>
         <div class="absolute" style="bottom: 20rem; left: 1rem;">
           <svg width="50" height="50" viewBox="0 0 50 50" class="mx-1">
@@ -41,7 +41,7 @@
         </div>
         <div class="text-center absolute w-full" style="bottom: 4rem">
           <p class="text-white tracking-wide uppercase text-lg font-bold">{{person.name}}</p>
-          <p class="text-gray-400 text-sm">{{person.socialtag}}</p>
+          <p class="text-gray-400 text-sm">{{person.socialTag}}</p>
         </div>
       </div>
       <div class="relative flex justify-between items-center flex-row px-6 z-50 -mt-10">
@@ -67,15 +67,15 @@
       <div class="pb-4 uppercase text-center tracking-wide flex justify-around flex-col sm:flex-row">
         <div class="posts">
           <p class="text-gray-400 text-sm">Posts</p>
-          <p class="text-lg font-semibold" style="color: var(--color-yellow);">76</p>
+          <p class="text-lg font-semibold" style="color: var(--color-yellow);">{{person.socialNumbers[0]}}</p>
         </div>
         <div class="followers">
           <p class="text-gray-400 text-sm">Followers</p>
-          <p class="text-lg font-semibold" style="color: var(--color-yellow);">964</p>
+          <p class="text-lg font-semibold" style="color: var(--color-yellow);">{{person.socialNumbers[1]}}</p>
         </div>
         <div class="following">
           <p class="text-gray-400 text-sm">Following</p>
-          <p class="text-lg font-semibold" style="color: var(--color-yellow);">34</p>
+          <p class="text-lg font-semibold" style="color: var(--color-yellow);">{{person.socialNumbers[2]}}</p>
         </div>
       </div>
     </div>
