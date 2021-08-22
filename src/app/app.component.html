@@ -1,9 +1,10 @@
 <!-- Nav Bar -->
 <div class="w-screen flex flex-row items-center p-1 justify-between bg-gray-100 shadow-xs">
   <div class="mr-4 ml-4 md:hidden px-2.5 py-5 w-screen relative">
-    <button (click)="switchNavbar()"><i class="fas fa-bars"></i></button>
-    <div class="w-screen -ml-8 text-center text-xl sm:text-2xl cursor-pointer absolute" routerLink="home">
-      <b>I</b>n<b>T</b>ernetics.Group
+    <button (click)="switchNavbar()"><i class="fas fa-bars text-gray-800"></i></button>
+    <div class="w-screen -ml-8 text-center text-xl py-2 sm:text-2xl cursor-pointer absolute" routerLink="home">
+      <span class="text-gray-800"><b>I</b>n<b>T</b>ernetics.Group
+      </span>
     </div>
   </div>
   <div routerLink="home"
@@ -61,7 +62,7 @@
     </div>
   </nav>
 </div>
-<nav *ngIf="visibleNavbar" class="flex flex-col justify-center items-center md:hidden">
+<nav *ngIf="visibleNavbar" class="flex flex-col justify-center items-center mt-2 md:hidden">
   <div routerLink="home" routerLinkActive="active"
        class="text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer">
     <svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -169,7 +170,8 @@
       </a>
     </div>
     <p class="mt-8 text-base leading-6 text-center text-gray-400">
-      © 2021 <strong>I</strong>n<strong>T</strong>ernetics.Group, {{ 'Reserved' | translate }}
+      Copyright 2021 © <strong>I</strong>n<strong>T</strong>ernetics.Group, {{'Reserved' | translate}}
+      , {{'DesignBy' | translate}}
     </p>
   </div>
 </section>
