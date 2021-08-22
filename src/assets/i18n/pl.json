@@ -18,6 +18,7 @@
   "ContactFormName": "Imię",
   "ContactFormEmail": "Adres e-mail",
   "ContactFormMessage": "Wiadomość",
+  "ContactFormError": "To pole jest wymagane.",
   "Submit": "Wyślij",
   "FooBarAbout": "O nas",
   "FooBarTeam": "Team",

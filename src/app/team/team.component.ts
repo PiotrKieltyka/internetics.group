@@ -10,6 +10,7 @@ export class TeamComponent {
   team: Array<{
     name: string;
     socialTag: string;
+    socialUrl: string;
     occupation: string;
     codingFrom: string;
     bio: string;
@@ -19,6 +20,7 @@ export class TeamComponent {
     {
       name: 'Piotr Kiełtyka',
       socialTag: '@fangstick',
+      socialUrl: 'https://github.com/PiotrKieltyka',
       occupation: 'Fullstack Developer',
       codingFrom: 'Coding from Planet Earth',
       bio: 'PKBio',
@@ -28,6 +30,7 @@ export class TeamComponent {
     {
       name: 'Piotr Szczechowski',
       socialTag: '@pszczechowskiit',
+      socialUrl: 'https://github.com/pszczechowski',
       occupation: 'Frontend Developer',
       codingFrom: 'Coding from Planet Earth',
       bio: 'PSzBio',

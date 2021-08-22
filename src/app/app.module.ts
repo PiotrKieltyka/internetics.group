@@ -14,6 +14,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {PricingComponent} from './home/pricing/pricing.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 export function translateHttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -35,13 +36,14 @@ export function translateHttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
         useFactory: translateHttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

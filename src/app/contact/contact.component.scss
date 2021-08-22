@@ -1,0 +1,23 @@
+.ng-valid,
+.ng-valid.required {
+  border-bottom: 2px solid rgb(209, 213, 219);
+}
+
+.ng-invalid:not(form) {
+  border-bottom: 2px solid var(--color-pink);
+}
+
+@media (min-width: 640px) {
+  .fan-animation {
+    animation: fan 3s ease-in-out;
+  }
+}
+
+@keyframes fan {
+  0% {
+    transform: rotate(0deg) scale(.95);
+  }
+  100% {
+    transform: rotate(-6deg) scale(1);
+  }
+}
