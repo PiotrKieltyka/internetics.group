@@ -9,8 +9,8 @@ export class BenefitsComponent {
 
   benefits: Array<{title: string; description: string;}> = [
     {title: "BenefitsRWDTitle", description: "BenefitsRWD"},
-    {title: "BenefitsSSLTitle", description: "BenefitsSSL"},
     {title: "BenefitsDomainTitle", description: "BenefitsDomain"},
+    {title: "BenefitsSSLTitle", description: "BenefitsSSL"},
     {title: "BenefitsEmailTitle", description: "BenefitsEmail"},
     {title: "BenefitsUpdatesTitle", description: "BenefitsUpdates"},
     {title: "BenefitsBackupTitle", description: "BenefitsBackup"},
