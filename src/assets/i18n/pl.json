@@ -19,7 +19,7 @@
   "ContactFormEmail": "Adres e-mail",
   "ContactFormMessage": "Wiadomość",
   "ContactFormRequiredError": "To pole jest wymagane.",
-  "ContactFormEmailError": "Ten adres e-mail jest niewłaściwy.",
+  "ContactFormEmailError": "Nieprawidłowy adres E-mail.",
   "Submit": "Wyślij",
   "FooBarAbout": "O nas",
   "FooBarTeam": "Team",

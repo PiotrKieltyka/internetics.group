@@ -8,6 +8,9 @@
 }
 
 @media (min-width: 640px) {
+  form {
+    width: 420px;
+  }
   .fan-animation {
     animation: fan 3s ease-in-out;
   }
