@@ -1,17 +1,48 @@
-.container {
+.background {
   @media(min-width: 640px) {
     background-image: url("/assets/aboutus-bg.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: 156px;
+    animation: none;
   }
   @media(min-width: 1024px) {
     background-position-x: 412px;
+    animation: enter-1024 3s ease;
   }
   @media(min-width: 1280px) {
-    background-position-x: 668px;
+    background-position-x: 666px;
+    animation: enter-1280 3s ease;
   }
   @media(min-width: 1536px) {
+    background-position-x: 924px;
+    animation: enter-1536 3s ease;
+  }
+}
+
+@keyframes enter-1024 {
+  0% {
+    background-position-x: 200%;
+  }
+  100% {
+    background-position-x: 412px;
+  }
+}
+
+@keyframes enter-1280 {
+  0% {
+    background-position-x: 175%;
+  }
+  100% {
+    background-position-x: 666px;
+  }
+}
+
+@keyframes enter-1536 {
+  0% {
+    background-position-x: 150%;
+  }
+  100% {
     background-position-x: 924px;
   }
 }
