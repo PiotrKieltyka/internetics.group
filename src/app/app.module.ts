@@ -15,7 +15,7 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {PricingComponent} from './home/pricing/pricing.component';
 import {ReactiveFormsModule} from "@angular/forms";
-import {BenefitsComponent} from './benefits/benefits.component';
+import {BenefitsComponent} from './home/benefits/benefits.component';
 
 export function translateHttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
