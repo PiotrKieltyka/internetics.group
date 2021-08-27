@@ -16,6 +16,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { PricingComponent } from './home/pricing/pricing.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BenefitsComponent } from './home/benefits/benefits.component';
+import { SelectPlanComponent } from './contact/select-plan/select-plan.component';
 
 export function translateHttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -33,6 +34,7 @@ export function translateHttpLoaderFactory(http: HttpClient) {
     ExamplesComponent,
     PricingComponent,
     BenefitsComponent,
+    SelectPlanComponent,
   ],
   imports: [
     BrowserModule,

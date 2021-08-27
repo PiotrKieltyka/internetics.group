@@ -7,7 +7,7 @@
       <div class="p-8 text-3xl font-bold text-center">
         <p
           style="color: var(--color-pink);">
-          Hobby</p>
+          {{plans[0].planName}}</p>
       </div>
       <div class="border-0 text-base">
         <div class="text-center text-gray-100 py-4">
@@ -34,7 +34,7 @@
         <p class="text-base" translate>monthly</p>
       </div>
       <div class="text-center mt-8 mb-8 mt-auto">
-        <a href="#"
+        <a [routerLink]="['/contact', plans[0].planId]"
            class="inline-block bg-gray-800 text-gray-300 px-6 py-2 rounded-full hover:bg-gray-300 hover:text-gray-800 hover:no-underline"
            translate>GetPlan</a>
       </div>
@@ -45,7 +45,7 @@
       <div class="w-full p-8 text-3xl font-bold text-center">
         <p
           style="color: var(--color-yellow);">
-          Start-up</p>
+          {{plans[1].planName}}</p>
         <p class="text-sm uppercase text-gray-100 underline py-1" translate="">MostPopular</p>
       </div>
       <div class="w-full border-0 text-base">
@@ -73,7 +73,7 @@
         <p class="text-base" translate>monthly</p>
       </div>
       <div class="text-center mt-8 mb-8 mt-auto">
-        <a href="#"
+        <a [routerLink]="['/contact', plans[1].planId]"
            class="inline-block bg-gray-800 text-gray-300 px-6 py-2 rounded-full hover:bg-gray-300 hover:text-gray-800 hover:no-underline animate-pulse"
            translate>GetPlan</a>
       </div>
@@ -84,7 +84,7 @@
       <div class="p-8 text-3xl font-bold text-center">
         <p
           style="color: var(--color-navy-blue);">
-          Pro</p>
+          {{plans[2].planName}}</p>
       </div>
       <div class="border-0 text-base">
         <div class="text-center text-gray-100 border-0 py-4">
@@ -111,7 +111,7 @@
         <p class="text-base" translate>monthly</p>
       </div>
       <div class="text-center mt-8 mb-8 mt-auto">
-        <a href="#"
+        <a [routerLink]="['/contact', plans[2].planId]"
            class="inline-block bg-gray-800 text-gray-300 px-6 py-2 rounded-full hover:bg-gray-300 hover:text-gray-800 hover:no-underline"
            translate>GetPlan</a>
       </div>
