@@ -8,9 +8,8 @@ describe('JumboComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ JumboComponent ]
-    })
-    .compileComponents();
+      declarations: [JumboComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
