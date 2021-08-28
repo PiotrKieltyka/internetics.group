@@ -22,13 +22,15 @@ export class ContactComponent {
     subscription: new FormControl(this.pricingPlans[Number(this.plan)].planId),
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.email, Validators.required]),
-    message: new FormControl('', [
-      Validators.required,
-      Validators.minLength(10),
-    ]),
+    message: new FormControl('',),
   });
 
   submitContactForm() {
+    const plane = document.querySelector('#plane') as HTMLElement;
+    plane.classList.add('fly');
+    plane.addEventListener('animationend', () => {
+      plane.classList.remove('fly')
+    }, false);
     console.log(this.contactForm);
   }
 

@@ -52,7 +52,7 @@
                          formControlName="subscription"
                          [value]="pricingPlan.planId">
                   <label
-                    class="radio text-center self-center py-2 px-4 border-2 rounded cursor-pointer hover:opacity-75"
+                    class="radio text-center self-center py-2 px-4 border-2 rounded-xl cursor-pointer"
                     for="{{pricingPlan.planName}}">{{pricingPlan.planName}}</label>
                 </div>
                 <label for="subscription"
@@ -68,7 +68,7 @@
                 <input autocomplete="off" id="name" name="name" type="text"
                        formControlName="name"
                        class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-rose-600"
-                       placeholder="Your Name" required/>
+                       placeholder="{{'FormNameField' | translate}}" required/>
                 <label for="name"
                        class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                        translate>FormNameField</label>
@@ -82,7 +82,7 @@
                 <input autocomplete="off" id="email" name="email" type="text"
                        formControlName="email"
                        class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-rose-600"
-                       placeholder="E-mail address" required/>
+                       placeholder="{{'FormEmailField' | translate}}" required/>
                 <label for="email"
                        class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                        translate>FormEmailField</label>
@@ -94,11 +94,11 @@
                 <span style="font-size: .7rem;"
                       *ngIf="!email.invalid && !email.errors?.required && !email.errors?.email">&nbsp;</span>
               </div>
-              <div class="relative">
+              <div class="relative" *ngIf="!plan">
                 <textarea id="message" name="message"
                           formControlName="message"
                           class="peer placeholder-transparent h-24 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-rose-600"
-                          placeholder="Message" required></textarea>
+                          placeholder="{{'FormMessageField' | translate}}"></textarea>
                 <label for="message"
                        class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                        translate>FormMessageField</label>
@@ -109,15 +109,22 @@
               </div>
               <div class="relative">
                 <button
-                  [disabled]="!contactForm.invalid"
+                  [disabled]="contactForm.invalid"
                   [ngClass]="!contactForm.invalid ? 'enabled' : 'disabled'"
-                  class="text-white text-sm rounded-md px-4 py-2"
-                  translate>Submit
+                  class="text-white text-sm rounded-xl px-4 py-2 w-28"
+                  translate>
+                  <svg width="17" height="17" id="plane" style="display: inline" class="mr-1"
+                       xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                          d="M464 4.3L16 262.7C-7 276-4.7 309.9 19.8 320L160 378v102c0 30.2 37.8 43.3 56.7 20.3l60.7-73.8 126.4 52.2c19.1 7.9 40.7-4.2 43.8-24.7l64-417.1C515.7 10.2 487-9 464 4.3zM192 480v-88.8l54.5 22.5L192 480zm224-30.9l-206.2-85.2 199.5-235.8c4.8-5.6-2.9-13.2-8.5-8.4L145.5 337.3 32 290.5 480 32l-64 417.1z"></path>
+                  </svg>
+                  Submit
                 </button>
               </div>
               <div class="relative">
                 <p class="text-gray-400 text-sm" translate>FormDirectMessage</p>
-                <a href="mailto:internetics@protonmail.com" class="text-gray-500 text-sm">internetics@protonmail.com</a>
+                <a href="mailto:internetics@protonmail.com" class="text-gray-500 text-sm hover:text-gray-700">internetics@protonmail.com</a>
               </div>
             </div>
           </form>
