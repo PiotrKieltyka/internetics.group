@@ -6,6 +6,7 @@ import {ContactComponent} from './contact/contact.component';
 import {TermsComponent} from './terms/terms.component';
 import {HomeComponent} from './home/home.component';
 import {PricingComponent} from './home/pricing/pricing.component';
+import {NotFoundComponent} from "./error/not-found.component";
 
 const siteRoutes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -16,7 +17,7 @@ const siteRoutes: Routes = [
   {path: 'contact/:id', component: ContactComponent},
   {path: 'terms', component: TermsComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: '**', redirectTo: 'home'},
+  {path: '**', component: NotFoundComponent},
 ];
 
 @NgModule({

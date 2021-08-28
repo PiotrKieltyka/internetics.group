@@ -15,6 +15,15 @@
   animation: underline 2s ease;
 }
 
+#back2Top {
+  overflow: hidden;
+  z-index: 999;
+  cursor: pointer;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
 @keyframes underline {
   0% {
     transform: scaleX(0);
