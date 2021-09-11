@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TeamMemberInterface } from '../models/team-member.interface';
 
 @Component({
   selector: 'app-team',
@@ -6,16 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./team.component.scss'],
 })
 export class TeamComponent {
-  team: Array<{
-    name: string;
-    socialTag: string;
-    socialUrl: string;
-    occupation: string;
-    codingFrom: string;
-    bio: string;
-    imageUrl: string;
-    socialNumbers: Array<number>;
-  }> = [
+  team: Array<TeamMemberInterface> = [
     {
       name: 'Piotr Kiełtyka',
       socialTag: '@fangstick',
@@ -24,7 +16,9 @@ export class TeamComponent {
       codingFrom: 'Coding from Planet Earth',
       bio: 'PKBio',
       imageUrl: './assets/team/pk.webp',
-      socialNumbers: [64, 341, 43],
+      socialNumbers: {
+        posts: 64, followers: 341, following: 43,
+      },
     },
     {
       name: 'Piotr Szczechowski',
@@ -34,7 +28,9 @@ export class TeamComponent {
       codingFrom: 'Coding from Planet Earth',
       bio: 'PSzBio',
       imageUrl: './assets/team/psz.webp',
-      socialNumbers: [23, 237, 34],
+      socialNumbers: {
+        posts: 23, followers: 237, following: 34,
+      },
     },
   ];
 }

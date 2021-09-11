@@ -1,7 +1,9 @@
-import {Component} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {ActivatedRoute} from "@angular/router";
-import {PricingPlans} from "../models/pricing-plans.model";
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { PricingPlans } from '../models/pricing-plans.model';
+import { EmailService } from '../services/email.service';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -9,12 +11,12 @@ import {PricingPlans} from "../models/pricing-plans.model";
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
-
   pricingPlans = PricingPlans;
   plan: string = this.route.snapshot.paramMap.get('id') as string;
 
   constructor(
     private route: ActivatedRoute,
+    private emailService: EmailService,
   ) {
   }
 
@@ -22,16 +24,25 @@ export class ContactComponent {
     subscription: new FormControl(this.pricingPlans[Number(this.plan)].planId),
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.email, Validators.required]),
-    message: new FormControl('',),
+    message: new FormControl(''),
   });
 
-  submitContactForm() {
+  submitContactForm(): void {
     const plane = document.querySelector('#plane') as HTMLElement;
     plane.classList.add('fly');
-    plane.addEventListener('animationend', () => {
-      plane.classList.remove('fly')
-    }, false);
-    console.log(this.contactForm);
+    plane.addEventListener(
+      'animationend',
+      () => {
+        plane.classList.remove('fly');
+      },
+      false,
+    );
+    this.emailService.sendEmail({
+      secret: environment.backendConfig.secret,
+      subject: 'Message from Internetics Website',
+      content:
+        `<p>Message from: ${this.contactForm.get('name')?.value}</p><p>Message: ${this.contactForm.get('message')?.value}</p><p>Reply to: ${this.contactForm.get('email')?.value}</p>`,
+    });
   }
 
   get subscr() {

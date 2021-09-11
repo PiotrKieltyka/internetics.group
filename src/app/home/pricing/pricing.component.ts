@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
-import {PricingPlans} from "../../models/pricing-plans.model";
-import {PricingPlansInterface} from "../../models/pricing-plans.interface";
+import { Component } from '@angular/core';
+import { PricingPlanInterface } from 'src/app/models/pricing-plan.interface';
+import { PricingPlans } from 'src/app/models/pricing-plans.model';
+
 
 @Component({
   selector: 'app-pricing',
@@ -9,6 +10,6 @@ import {PricingPlansInterface} from "../../models/pricing-plans.interface";
 })
 export class PricingComponent {
 
-  plans: Array<PricingPlansInterface> = PricingPlans;
+  plans: Array<PricingPlanInterface> = PricingPlans;
 
 }

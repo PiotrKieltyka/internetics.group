@@ -16,6 +16,7 @@
   "scripts": {
     "ng": "ng",
     "host": "node -p \"require('ip').address()\"",
+    "date": "node -p \"new Date().toISOString().split('T').splice(0,1).join('')\"",
     "start": "ng serve --open",
     "start:host": "ng serve --host=$(npm run host --silent) --open",
     "build": "ng build",
