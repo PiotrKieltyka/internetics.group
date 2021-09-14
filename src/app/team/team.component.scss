@@ -1,0 +1,47 @@
+#team-fan {
+  animation: fan 3s ease-in-out;
+}
+
+#bulb {
+  animation: bulb 2s ease;
+  bottom: 23rem;
+  left: 1rem;
+}
+
+#internetics {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  left: 353px;
+  bottom: 195px;
+  animation: internetics 3s ease;
+}
+
+@keyframes fan {
+  0% {
+    transform: rotate(0deg) scale(0.95);
+  }
+  100% {
+    transform: rotate(-6deg) scale(1);
+  }
+}
+
+@keyframes bulb {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes internetics {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

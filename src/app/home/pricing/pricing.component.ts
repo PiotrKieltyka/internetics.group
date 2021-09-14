@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { PricingPlanInterface } from 'src/app/models/pricing-plan.interface';
+import { PricingPlans } from 'src/app/models/pricing-plans.model';
+
 
 @Component({
   selector: 'app-pricing',
   templateUrl: './pricing.component.html',
-  styleUrls: ['./pricing.component.scss']
+  styleUrls: ['./pricing.component.scss'],
 })
-export class PricingComponent implements OnInit {
+export class PricingComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  plans: Array<PricingPlanInterface> = PricingPlans;
 
 }

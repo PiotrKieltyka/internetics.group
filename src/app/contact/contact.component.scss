@@ -1,0 +1,77 @@
+input[type=radio]:checked ~ .radio {
+  color: white;
+  background-color: var(--color-pink);
+  border: none;
+}
+
+.ng-valid.required {
+  border-bottom: 2px solid rgb(209, 213, 219);
+}
+
+.ng-invalid:not(form) {
+  border-bottom: 2px solid var(--color-pink);
+}
+
+.enabled {
+  border: 2px solid white;
+  background: linear-gradient(
+      45deg,
+      var(--color-pink) 0%,
+      var(--color-navy-blue) 50%,
+      var(--color-yellow) 100%
+  );
+}
+
+.disabled {
+  background: white;
+  border: 2px solid rgb(209, 213, 219);
+  color: rgb(209, 213, 219);
+}
+
+.fly {
+  animation: plane-in-air 6s ease;
+}
+
+.radio:hover {
+  border: 2px solid var(--color-yellow);
+}
+
+@media (min-width: 640px) {
+  form {
+    width: 420px;
+  }
+  .fan-animation {
+    animation: fan 3s ease-in-out;
+  }
+}
+
+@keyframes fan {
+  0% {
+    transform: rotate(0deg) scale(0.95);
+  }
+  100% {
+    transform: rotate(-6deg) scale(1);
+  }
+}
+
+@keyframes plane-in-air {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    color: var(--color-pink);
+    transform: rotate(360deg);
+  }
+  85% {
+    opacity: 0;
+    transform: translateX(300px) translateY(-150px) scale(.5);
+  }
+  90% {
+    opacity: 0;
+    transform: translateX(0) translateY(0) scale(.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

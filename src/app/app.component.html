@@ -1,13 +1,14 @@
 <!-- Nav Bar -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 <div class="w-screen flex flex-row items-center p-1 justify-between bg-gray-100 shadow-xs">
-  <div class="mr-4 ml-4 md:hidden px-2.5 py-5 w-screen">
-    <button (click)="switchNavbar()"><i class="fas fa-bars"></i></button>
+  <div class="mr-4 ml-4 md:hidden px-2.5 py-5 w-screen relative">
+    <button (click)="switchNavbar()"><i class="fas fa-bars text-gray-800"></i></button>
+    <div class="w-screen -ml-8 text-center text-xl py-2 sm:text-2xl cursor-pointer absolute" routerLink="home">
+      <span class="text-gray-800"><b>I</b>n<b>T</b>ernetics.Group</span>
+    </div>
   </div>
   <div routerLink="home"
-       class="ml-8 text-lg text-gray-700 hidden md:flex hover:text-gray-900 cursor-pointer"
-       style="background: -webkit-linear-gradient(45deg, var(--color-navy-blue) 0%, var(--color-navy-blue) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-    <!--       style="background: -webkit-linear-gradient(rgb(243, 244, 246), rgb(107, 114, 128), rgb(17, 24, 39)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">-->
+       class="ml-8 text-lg text-gray-700 hidden md:flex cursor-pointer"
+       style="background-image: -webkit-linear-gradient(45deg, var(--color-navy-blue) 0%, var(--color-navy-blue) 100%); -webkit-background-clip: text;">
     <svg width="23" height="23" viewBox="0 0 50 50" class="mx-1">
       <g transform="matrix(0.11577112469433527,0,0,0.11577112469433527,-6.946267481660116,-1.2619052150050751)"
          fill="var(--color-navy-blue)">
@@ -34,7 +35,7 @@
         </g>
       </g>
     </svg>
-    <strong>I</strong>n<strong>T</strong>ernetics.Group
+    <b>I</b>n<b>T</b>ernetics.Group
   </div>
   <!--  <span class="w-screen md:w-1/3 h-10 bg-gray-200 cursor-pointer border border-gray-300 text-sm rounded-full flex">-->
   <!--      <input type="search" name="search" placeholder="Search"-->
@@ -59,7 +60,7 @@
     </div>
   </nav>
 </div>
-<nav *ngIf="visibleNavbar" class="flex flex-col justify-center items-center md:hidden">
+<nav *ngIf="visibleNavbar" class="flex flex-col justify-center items-center mt-2 md:hidden">
   <div routerLink="home" routerLinkActive="active"
        class="text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer">
     <svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -87,6 +88,14 @@
 <router-outlet></router-outlet>
 
 <!-- Footer -->
+<div class="flex justify-center items-center w-full">
+  <svg width="35" height="35" class="cursor-pointer"
+       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+       onclick="window.scroll({top: 0, left: 0, behavior: 'smooth'})">
+    <path fill="#6B7280"
+          d="M35.5 248l148-148.5c4.7-4.7 12.3-4.7 17 0l148 148.5c4.7 4.7 4.7 12.3 0 17l-7.1 7.1c-4.7 4.7-12.3 4.7-17 0L209 156.1V468c0 6.6-5.4 12-12 12h-10c-6.6 0-12-5.4-12-12V156.1L59.6 272c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.6-4.7-12.2 0-16.9zM0 44v8c0 6.6 5.4 12 12 12h360c6.6 0 12-5.4 12-12v-8c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44z"></path>
+  </svg>
+</div>
 <section class="bg-gray-100">
   <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
     <nav class="flex flex-wrap justify-center -mx-5 -my-2">
@@ -116,7 +125,7 @@
         </a>
       </div>
     </nav>
-    <div class="flex flex-wrap justify-center mt-8">
+    <address class="flex flex-wrap justify-center mt-8">
       <!--      <a href="#" class="text-gray-400 hover:text-gray-500">-->
       <!--        <span class="sr-only">Facebook</span>-->
       <!--        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">-->
@@ -157,9 +166,19 @@
                 clip-rule="evenodd"></path>
         </svg>
       </a>
-    </div>
+    </address>
     <p class="mt-8 text-base leading-6 text-center text-gray-400">
-      © 2021 <strong>I</strong>n<strong>T</strong>ernetics.Group, {{ 'Reserved' | translate }}
+      Copyright 2021 © <strong>I</strong>n<strong>T</strong>ernetics.Group,
+      {{'Reserved' | translate}},
+      <a class="no-underline hover:text-gray-500" href="https://piotrkieltyka.website">{{'DesignBy' | translate}}</a>.
     </p>
   </div>
 </section>
+<a id="back2Top" title="Back to top">
+  <svg width="30" height="30" class="cursor-pointer"
+       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+       onclick="window.scroll({top: 0, left: 0, behavior: 'smooth'})">
+    <path fill="#6B7280"
+          d="M35.5 248l148-148.5c4.7-4.7 12.3-4.7 17 0l148 148.5c4.7 4.7 4.7 12.3 0 17l-7.1 7.1c-4.7 4.7-12.3 4.7-17 0L209 156.1V468c0 6.6-5.4 12-12 12h-10c-6.6 0-12-5.4-12-12V156.1L59.6 272c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.6-4.7-12.2 0-16.9zM0 44v8c0 6.6 5.4 12 12 12h360c6.6 0 12-5.4 12-12v-8c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44z"></path>
+  </svg>
+</a>

@@ -1,3 +1,6 @@
+import { BackendConfig } from './backend.config';
+
 export const environment = {
-  production: true
+  production: true,
+  backendConfig: BackendConfig,
 };
