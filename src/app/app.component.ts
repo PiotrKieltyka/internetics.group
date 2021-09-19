@@ -11,7 +11,9 @@ export class AppComponent {
   visibleNavbar = false;
 
   constructor(private translateService: TranslateService) {
-    translateService.setDefaultLang('pl');
+    translateService.setDefaultLang(
+      translateService.getBrowserLang() === 'pl' ? 'pl' : 'en',
+    );
   }
 
   switchLanguage(language: string): void {

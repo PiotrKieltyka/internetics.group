@@ -43,6 +43,7 @@ export class ContactComponent {
       content:
         `<p>Message from: ${this.contactForm.get('name')?.value}</p><p>Message: ${this.contactForm.get('message')?.value}</p><p>Reply to: ${this.contactForm.get('email')?.value}</p>`,
     });
+    this.contactForm.reset();
   }
 
   get subscr() {
