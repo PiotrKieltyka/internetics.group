@@ -38,7 +38,7 @@
   "FormNameField": "Name",
   "FormEmailField": "E-mail address",
   "FormMessageField": "Message",
-  "FormDirectMessage": "or send a direct message to:",
+  "FormDirectMessage": "or send a message direct to:",
   "FormRequiredError": "This field is required.",
   "FormEmailError": "This E-mail address is invalid.",
   "Submit": "Submit",

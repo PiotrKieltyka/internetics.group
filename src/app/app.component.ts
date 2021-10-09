@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { slideInAnimation } from './animations';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
+  animations: [slideInAnimation],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
@@ -22,5 +25,11 @@ export class AppComponent {
 
   switchNavbar(): void {
     this.visibleNavbar = !this.visibleNavbar;
+  }
+
+  prepareRoute(outlet: RouterOutlet) {
+    return (
+      outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation
+    );
   }
 }
