@@ -111,13 +111,14 @@
         <p class="text-gray-500 italic line-through">
           250 PLN
         </p>
-        <p class="text-base" translate>monthly</p>
+        <p class='text-base' translate>monthly</p>
       </div>
-      <div class="text-center mt-8 mb-8 mt-auto">
+      <div class='text-center mt-8 mb-8 mt-auto'>
         <a [routerLink]="['/contact', plans[2].planId]"
-           class="inline-block bg-gray-800 text-gray-300 px-6 py-2 rounded-full hover:bg-gray-300 hover:text-gray-800 hover:no-underline"
+           class='inline-block bg-gray-800 text-gray-300 px-6 py-2 rounded-full hover:bg-gray-300 hover:text-gray-800 hover:no-underline'
            translate>GetPlan</a>
       </div>
     </div>
   </div>
 </section>
+<app-footer *ngIf="route.snapshot.url[0].path === 'pricing'"></app-footer>
