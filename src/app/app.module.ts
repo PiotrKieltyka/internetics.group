@@ -20,6 +20,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { ArrowToTopComponent } from './tools/arrow-to-top/arrow-to-top.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ExampleComponent } from './home/examples/example.component';
 
 export function translateHttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -40,6 +41,7 @@ export function translateHttpLoaderFactory(http: HttpClient) {
     NotFoundComponent,
     FooterComponent,
     ArrowToTopComponent,
+    ExampleComponent,
   ],
   imports: [
     BrowserModule,
