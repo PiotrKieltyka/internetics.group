@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-not-found',
@@ -16,7 +16,7 @@ import {Component} from '@angular/core';
     </div>
   </section>
   `,
-  styleUrls: ['./not-found.component.scss']
+  styles: [],
 })
 export class NotFoundComponent {
 }
