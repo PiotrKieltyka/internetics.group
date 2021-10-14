@@ -22,7 +22,7 @@ jobs:
 
       - name: Add backend config file
         env:
-          BACKEND_SECRET: ${{ BACKEND_SECRET }}
+          BACKEND_SECRET: ${{ secrets.BACKEND_SECRET }}
         run: |
           echo 'export const BackendConfig = { secret: `$BACKEND_SECRET` }' > ./src/environments/backend.config.ts
 
