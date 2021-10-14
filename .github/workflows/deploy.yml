@@ -4,7 +4,7 @@ on:
   push:
     branches: [ development ]
   workflow_dispatch:
-    
+
 
 jobs:
   build-and-deploy:
@@ -19,6 +19,12 @@ jobs:
 
       - name: Installing dependencies
         run: npm i
+
+      - name: Add backend config file
+        env:
+          BACKEND_SECRET: ${{ BACKEND_SECRET }}
+        run: |
+          echo 'export const BackendConfig = { secret: `$BACKEND_SECRET` }' > ./src/environments/backend.config.ts
 
       - name: Building project
         run: npm run build:prod
