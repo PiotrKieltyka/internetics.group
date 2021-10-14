@@ -21,8 +21,10 @@ jobs:
         run: npm i
 
       - name: Add backend config file
+        env:
+          BACKEND_SECRET: ${{ secrets.BACKEND_SECRET }}
         run: |
-          echo 'export const BackendConfig = { secret: `${{ secrets.BACKEND_SECRET }}` }' > ./src/environments/backend.config.ts
+          echo 'export const BackendConfig = { secret: `'$BACKEND_SECRET'` }' > ./src/environments/backend.config.ts
 
       - name: Building project
         run: npm run build:prod
