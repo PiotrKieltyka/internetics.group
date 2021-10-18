@@ -38,7 +38,7 @@
             </svg>
           </div>
           <div>
-            <h1 class='text-gray-700 text-2xl font-semibold'>{{(plan ? 'OrderForm' : 'ContactForm') | translate}}</h1>
+            <h1 class='text-gray-700 text-2xl font-medium'>{{(plan ? 'OrderForm' : 'ContactForm') | translate}}</h1>
           </div>
           <form class='divide-y divide-gray-200' [formGroup]='contactForm' (ngSubmit)='submitContactForm()'>
             <div class='py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7'>
@@ -123,9 +123,10 @@
                   Submit
                 </button>
               </div>
-              <div class="relative">
-                <p class='text-gray-400 text-sm' translate>FormDirectMessage</p>
-                <a href='mailto:internetics@protonmail.com' class='text-gray-500 text-sm hover:text-gray-700'>internetics@protonmail.com</a>
+              <div class='relative'>
+                <p class='text-gray-500 text-sm font-medium' translate>FormDirectMessage</p>
+                <a href='mailto:internetics@protonmail.com'
+                   class='text-gray-700 text-sm font-medium hover:text-gray-900'>internetics@protonmail.com</a>
               </div>
             </div>
           </form>

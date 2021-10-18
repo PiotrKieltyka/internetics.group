@@ -6,7 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { TermsComponent } from './terms/terms.component';
 import { HomeComponent } from './home/home.component';
 import { PricingComponent } from './home/pricing/pricing.component';
-import { NotFoundComponent } from './error/not-found.component';
+import { NotFoundPageComponent } from './404-page/404-page.component';
 
 const siteRoutes: Routes = [
   { path: 'home', component: HomeComponent, data: { animation: 'HomePage' } },
@@ -17,7 +17,7 @@ const siteRoutes: Routes = [
   { path: 'contact/:id', component: ContactComponent, data: { animation: 'ContactPage' } },
   { path: 'terms', component: TermsComponent, data: { animation: 'TermsPage' } },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '**', component: NotFoundComponent },
+  { path: '**', component: NotFoundPageComponent },
 ];
 
 @NgModule({

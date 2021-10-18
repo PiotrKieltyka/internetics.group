@@ -15,7 +15,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { PricingComponent } from './home/pricing/pricing.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BenefitsComponent } from './home/benefits/benefits.component';
-import { NotFoundComponent } from './error/not-found.component';
+import { NotFoundPageComponent } from './404-page/404-page.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { ArrowToTopComponent } from './tools/arrow-to-top/arrow-to-top.component';
@@ -38,7 +38,7 @@ export function translateHttpLoaderFactory(http: HttpClient) {
     ExamplesComponent,
     PricingComponent,
     BenefitsComponent,
-    NotFoundComponent,
+    NotFoundPageComponent,
     FooterComponent,
     ArrowToTopComponent,
     ExampleComponent,

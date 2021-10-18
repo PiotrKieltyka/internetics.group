@@ -43,9 +43,9 @@
         </div>
         <div class="relative text-center absolute w-full" style="bottom: 6rem">
           <a href="{{person.socialUrl}}">
-            <p class="text-white tracking-wide uppercase text-lg font-bold">{{person.name}}</p>
+            <p class='text-white tracking-wide uppercase text-lg font-medium'>{{person.name}}</p>
           </a>
-          <p class="text-gray-400 text-sm">{{person.socialTag}}</p>
+          <p class='text-gray-400 text-sm font-light'>{{person.socialTag}}</p>
           <div id="internetics" class="absolute text-gray-300">
             <b>I</b>n<b>T</b>ernetics.Group
           </div>
@@ -63,9 +63,9 @@
           </svg>
         </button>
       </div>
-      <div class="pt-6 pb-8 text-gray-500 text-center">
-        <p class="text-gray-800">{{person.occupation}}</p>
-        <p class="text-sm">{{person.codingFrom}}</p>
+      <div class='pt-6 pb-8 text-gray-500 text-center'>
+        <p class='text-gray-800 font-medium'>{{person.occupation}}</p>
+        <p class='text-sm font-light'>{{person.codingFrom}}</p>
       </div>
       <div class="pb-10 flex text-center tracking-wide justify-around text-gray-700">
         <p class="w-11/12 h-38">{{person.bio | translate}}</p>
