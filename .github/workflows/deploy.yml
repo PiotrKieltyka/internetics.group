@@ -1,0 +1,39 @@
+name: Web-Deploy
+
+on:
+  push:
+    branches: [ development ]
+  workflow_dispatch:
+
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+
+      - name: Installing dependencies
+        run: npm i
+
+      - name: Add backend config file
+        env:
+          BACKEND_SECRET: ${{ secrets.BACKEND_SECRET }}
+        run: |
+          echo 'export const BackendConfig = { secret: `'$BACKEND_SECRET'` }' > ./src/environments/backend.config.ts
+
+      - name: Building project
+        run: npm run build:prod
+
+      - name: Deploy to server
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: ./www/internetics/

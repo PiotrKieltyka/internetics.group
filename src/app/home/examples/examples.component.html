@@ -1,19 +1,11 @@
-<section class="container h-1/2 flex flex-col justify-between items-center justify-center items-center">
-  <p class="text-center text-gray-700 text-2xl font-bold py-8" translate>OurProjects</p>
-  <div class="py-16" data-aos="fade-up" data-aos-duration="1000"><img
-    class="rounded-2xl shadow-2xl transform transition hover:scale-105"
-    src="https://raw.githubusercontent.com/PiotrKieltyka/frontendmentor-fylo-dark-theme-landing-page/master/design/desktop-preview.jpg"
-    loading="lazy"
-    alt="FrontendMentor"></div>
-  <div class="py-16" data-aos="fade-up" data-aos-duration="1000"><img
-    class="rounded-2xl shadow-2xl transform transition hover:scale-105"
-    src="https://raw.githubusercontent.com/PiotrKieltyka/frontendmentor-huddle-landing-page-with-curved-sections/master/design/desktop-preview.jpg"
-    loading="lazy"
-    alt="FrontendMentor"></div>
-  <div class="py-16" data-aos="fade-up" data-aos-duaration="1000"><img
-    class="rounded-2xl shadow-2xl transform transition hover:scale-105"
-    src="https://raw.githubusercontent.com/PiotrKieltyka/frontendmentor-social-media-dashboard/master/design/desktop-preview.jpg"
-    loading="lazy"
-    alt="FrontendMentor">
-  </div>
+<section id='examples'
+         class='container w-11/12 h-1/2 flex flex-col justify-between items-center justify-center items-center z-0'>
+  <p class='sticky top-0 bg-gray-100 w-screen text-center text-gray-700 text-2xl font-medium py-4 z-20' data-aos='fade'
+     translate>
+    OurProjects</p>
+  <app-example
+    *ngFor='let example of examples'
+    imageSource='{{example.imageSrc}}'
+    imageAlt='{{example.imageAlt}}'>
+  </app-example>
 </section>

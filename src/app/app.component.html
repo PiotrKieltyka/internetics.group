@@ -1,30 +1,39 @@
 <!-- Nav Bar -->
-<div class="w-screen flex flex-row items-center p-1 justify-between bg-gray-100 shadow-xs">
-  <div class="mr-4 ml-4 md:hidden px-2.5 py-5 w-screen relative">
-    <button (click)="switchNavbar()"><i class="fas fa-bars text-gray-800"></i></button>
-    <div class="w-screen -ml-8 text-center text-xl py-2 sm:text-2xl cursor-pointer absolute" routerLink="home">
-      <span class="text-gray-800"><b>I</b>n<b>T</b>ernetics.Group</span>
+<div class='w-screen flex flex-row items-center p-1 justify-between bg-gray-100 shadow-xs'>
+  <div class='mr-4 ml-4 md:hidden px-2.5 py-5 w-screen relative'>
+    <button (click)='switchNavbar()'>
+      <svg *ngIf='!visibleNavbar' width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>
+        <path fill='#0a152b'
+              d='M442 114H6a6 6 0 0 1-6-6V84a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6zm0 160H6a6 6 0 0 1-6-6v-24a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6zm0 160H6a6 6 0 0 1-6-6v-24a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6z'></path>
+      </svg>
+      <svg *ngIf='visibleNavbar' width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'>
+        <path fill='#0a152b'
+              d='M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z'></path>
+      </svg>
+    </button>
+    <div class='w-screen -ml-8 text-center text-xl py-2 sm:text-2xl cursor-pointer absolute' routerLink='home'>
+      <span class='text-gray-800'>Internetics.Group</span>
     </div>
   </div>
-  <div routerLink="home"
-       class="ml-8 text-lg text-gray-700 hidden md:flex cursor-pointer"
-       style="background-image: -webkit-linear-gradient(45deg, var(--color-navy-blue) 0%, var(--color-navy-blue) 100%); -webkit-background-clip: text;">
-    <svg width="23" height="23" viewBox="0 0 50 50" class="mx-1">
-      <g transform="matrix(0.11577112469433527,0,0,0.11577112469433527,-6.946267481660116,-1.2619052150050751)"
-         fill="var(--color-navy-blue)">
-        <g xmlns="http://www.w3.org/2000/svg">
-          <path d="M261,62.8c3.3,0,6-2.7,6-6V16.9c0-3.3-2.7-6-6-6s-6,2.7-6,6v39.9C255,60.1,257.7,62.8,261,62.8z"></path>
-          <path d="M446,201h-39.9c-3.3,0-6,2.7-6,6s2.7,6,6,6H446c3.3,0,6-2.7,6-6S449.3,201,446,201z"></path>
+  <div routerLink='home'
+       class='ml-8 text-lg text-gray-700 hidden md:flex cursor-pointer'
+       style='background-image: -webkit-linear-gradient(45deg, var(--color-navy-blue) 0%, var(--color-navy-blue) 100%); -webkit-background-clip: text;'>
+    <svg width='23' height='23' viewBox='0 0 50 50' class='mx-1'>
+      <g transform='matrix(0.11577112469433527,0,0,0.11577112469433527,-6.946267481660116,-1.2619052150050751)'
+         fill='var(--color-navy-blue)'>
+        <g xmlns='http://www.w3.org/2000/svg'>
+          <path d='M261,62.8c3.3,0,6-2.7,6-6V16.9c0-3.3-2.7-6-6-6s-6,2.7-6,6v39.9C255,60.1,257.7,62.8,261,62.8z'></path>
+          <path d='M446,201h-39.9c-3.3,0-6,2.7-6,6s2.7,6,6,6H446c3.3,0,6-2.7,6-6S449.3,201,446,201z'></path>
           <path
-            d="M111.9,207c0-3.3-2.7-6-6-6H66c-3.3,0-6,2.7-6,6s2.7,6,6,6h39.9C109.2,213,111.9,210.3,111.9,207z"></path>
+            d='M111.9,207c0-3.3-2.7-6-6-6H66c-3.3,0-6,2.7-6,6s2.7,6,6,6h39.9C109.2,213,111.9,210.3,111.9,207z'></path>
           <path
-            d="M369.3,102.1L400.4,71c2.3-2.3,2.3-6.1,0-8.5c-2.3-2.3-6.1-2.3-8.5,0l-31.1,31.1c-2.3,2.3-2.3,6.1,0,8.5   C363.2,104.4,367,104.4,369.3,102.1z"></path>
+            d='M369.3,102.1L400.4,71c2.3-2.3,2.3-6.1,0-8.5c-2.3-2.3-6.1-2.3-8.5,0l-31.1,31.1c-2.3,2.3-2.3,6.1,0,8.5   C363.2,104.4,367,104.4,369.3,102.1z'></path>
           <path
-            d="M142.7,102.1c1.1,1.1,2.7,1.8,4.2,1.8c3.3,0,6-2.7,6-6c0-1.6-0.6-3.1-1.8-4.2l-31.1-31.1c-2.3-2.3-6.1-2.3-8.5,0   s-2.3,6.1,0,8.5L142.7,102.1z"></path>
+            d='M142.7,102.1c1.1,1.1,2.7,1.8,4.2,1.8c3.3,0,6-2.7,6-6c0-1.6-0.6-3.1-1.8-4.2l-31.1-31.1c-2.3-2.3-6.1-2.3-8.5,0   s-2.3,6.1,0,8.5L142.7,102.1z'></path>
           <path
-            d="M332.3,249c0-7.2-5.8-12.9-12.9-12.9c-7.2,0-12.9,5.8-12.9,12.9c0,3.4,1.4,6.7,3.8,9.2c2.4,2.4,5.7,3.8,9.2,3.8   C326.5,262,332.3,256.2,332.3,249z"></path>
+            d='M332.3,249c0-7.2-5.8-12.9-12.9-12.9c-7.2,0-12.9,5.8-12.9,12.9c0,3.4,1.4,6.7,3.8,9.2c2.4,2.4,5.7,3.8,9.2,3.8   C326.5,262,332.3,256.2,332.3,249z'></path>
           <path
-            d="M202.7,239.9c-5.1-5.1-13.3-5.1-18.3,0c-5.1,5.1-5.1,13.3,0,18.3c2.4,2.4,5.7,3.8,9.2,3.8c3.4,0,6.7-1.4,9.2-3.8   C207.7,253.1,207.7,244.9,202.7,239.9z"></path>
+            d='M202.7,239.9c-5.1-5.1-13.3-5.1-18.3,0c-5.1,5.1-5.1,13.3,0,18.3c2.4,2.4,5.7,3.8,9.2,3.8c3.4,0,6.7-1.4,9.2-3.8   C207.7,253.1,207.7,244.9,202.7,239.9z'></path>
           <path
             d="M308,457h-14.9c-3.3,0-6-2.7-6-6s2.7-6,6-6H308v-24H204v24h68.4c3.3,0,6,2.7,6,6s-2.7,6-6,6H204v2.3   c-0.1,7.5,5.8,13.6,13.3,13.7c0.1,0,0.2,0,0.3,0h76.8c7.5,0.1,13.6-5.9,13.6-13.4c0-0.1,0-0.2,0-0.3V457z"></path>
           <path
@@ -43,142 +52,54 @@
   <!--      <i class="fas fa-search m-3 mr-5 text-lg text-gray-700 w-4 h-4">-->
   <!--      </i>-->
   <!--    </span>-->
-  <nav class="flex flex-row mr-8 hidden md:flex">
-    <div routerLink="aboutUs" routerLinkActive="active"
-         class="text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer" translate>NavBarAboutUs
+  <nav class='flex flex-row mr-8 hidden md:flex'>
+    <div routerLink='aboutUs' routerLinkActive='active'
+         class='text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer' translate>NavBarAboutUs
     </div>
-    <div routerLink="team" routerLinkActive="active"
-         class="text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer" translate>NavBarTeam
+    <div routerLink='team' routerLinkActive='active'
+         class='text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer' translate>NavBarTeam
     </div>
-    <div routerLink="contact" routerLinkActive="active"
-         class="text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer" translate>NavBarContact
+    <div routerLink='contact' routerLinkActive='active'
+         class='text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer' translate>NavBarContact
     </div>
-    <div class="text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer">
-      <button class="text-sm" (click)="switchLanguage('pl')">{{ 'Polish' | translate }}</button>
+    <div class='text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer'>
+      <button class='text-sm' (click)="switchLanguage('pl')">{{ 'Polish' | translate }}</button>
       <span> / </span>
-      <button class="text-sm" (click)="switchLanguage('en')">{{ 'English' | translate }}</button>
+      <button class='text-sm' (click)="switchLanguage('en')">{{ 'English' | translate }}</button>
     </div>
   </nav>
 </div>
-<nav *ngIf="visibleNavbar" class="flex flex-col justify-center items-center mt-2 md:hidden">
-  <div routerLink="home" routerLinkActive="active"
-       class="text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer">
-    <svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-      <path fill="#0a152b"
-            d="M541 229.16l-61-49.83v-77.4a6 6 0 0 0-6-6h-20a6 6 0 0 0-6 6v51.33L308.19 39.14a32.16 32.16 0 0 0-40.38 0L35 229.16a8 8 0 0 0-1.16 11.24l10.1 12.41a8 8 0 0 0 11.2 1.19L96 220.62v243a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-128l64 .3V464a16 16 0 0 0 16 16l128-.33a16 16 0 0 0 16-16V220.62L520.86 254a8 8 0 0 0 11.25-1.16l10.1-12.41a8 8 0 0 0-1.21-11.27zm-93.11 218.59h.1l-96 .3V319.88a16.05 16.05 0 0 0-15.95-16l-96-.27a16 16 0 0 0-16.05 16v128.14H128V194.51L288 63.94l160 130.57z"></path>
+<nav *ngIf='visibleNavbar'
+     class='flex flex-col justify-center items-center mt-2 md:hidden'>
+  <div routerLink='home' routerLinkActive='active'
+       class='text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer'>
+    <svg width='25' height='25' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'>
+      <path fill='#0a152b'
+            d='M541 229.16l-61-49.83v-77.4a6 6 0 0 0-6-6h-20a6 6 0 0 0-6 6v51.33L308.19 39.14a32.16 32.16 0 0 0-40.38 0L35 229.16a8 8 0 0 0-1.16 11.24l10.1 12.41a8 8 0 0 0 11.2 1.19L96 220.62v243a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-128l64 .3V464a16 16 0 0 0 16 16l128-.33a16 16 0 0 0 16-16V220.62L520.86 254a8 8 0 0 0 11.25-1.16l10.1-12.41a8 8 0 0 0-1.21-11.27zm-93.11 218.59h.1l-96 .3V319.88a16.05 16.05 0 0 0-15.95-16l-96-.27a16 16 0 0 0-16.05 16v128.14H128V194.51L288 63.94l160 130.57z'></path>
     </svg>
   </div>
-  <div routerLink="aboutUs" routerLinkActive="active"
-       class="text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer" translate>NavBarAboutUs
+  <div routerLink='aboutUs' routerLinkActive='active'
+       class='text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer' translate>NavBarAboutUs
   </div>
-  <div routerLink="team" routerLinkActive="active"
-       class="text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer" translate>NavBarTeam
+  <div routerLink='team' routerLinkActive='active'
+       class='text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer' translate>NavBarTeam
   </div>
-  <div routerLink="contact" routerLinkActive="active"
-       class="text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer" translate>NavBarContact
+  <div routerLink='contact' routerLinkActive='active'
+       class='text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer' translate>NavBarContact
   </div>
-  <div class="text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer">
-    <button class="text-sm" (click)="switchLanguage('pl')">{{ 'Polish' | translate }}</button>
+  <div class='text-gray-700 text-center px-4 py-2 m-2 hover:text-gray-900 cursor-pointer'>
+    <button class='text-sm' (click)="switchLanguage('pl')">{{ 'Polish' | translate }}</button>
     <span> / </span>
-    <button class="text-sm" (click)="switchLanguage('en')">{{ 'English' | translate }}</button>
+    <button class='text-sm' (click)="switchLanguage('en')">{{ 'English' | translate }}</button>
   </div>
 </nav>
 
 <!-- Content -->
-<router-outlet></router-outlet>
-
-<!-- Footer -->
-<div class="flex justify-center items-center w-full">
-  <svg width="35" height="35" class="cursor-pointer"
-       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-       onclick="window.scroll({top: 0, left: 0, behavior: 'smooth'})">
-    <path fill="#6B7280"
-          d="M35.5 248l148-148.5c4.7-4.7 12.3-4.7 17 0l148 148.5c4.7 4.7 4.7 12.3 0 17l-7.1 7.1c-4.7 4.7-12.3 4.7-17 0L209 156.1V468c0 6.6-5.4 12-12 12h-10c-6.6 0-12-5.4-12-12V156.1L59.6 272c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.6-4.7-12.2 0-16.9zM0 44v8c0 6.6 5.4 12 12 12h360c6.6 0 12-5.4 12-12v-8c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44z"></path>
-  </svg>
+<div [@routeAnimations]='prepareRoute(outlet)'>
+  <router-outlet #outlet='outlet'></router-outlet>
 </div>
-<section class="bg-gray-100">
-  <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
-    <nav class="flex flex-wrap justify-center -mx-5 -my-2">
-      <div class="px-5 py-2">
-        <a routerLink="aboutUs" class="text-base leading-6 text-gray-500 hover:text-gray-900" translate>
-          FooBarAbout
-        </a>
-      </div>
-      <div class="px-5 py-2">
-        <a routerLink="team" class="text-base leading-6 text-gray-500 hover:text-gray-900" translate>
-          FooBarTeam
-        </a>
-      </div>
-      <div class="px-5 py-2">
-        <a routerLink="pricing" class="text-base leading-6 text-gray-500 hover:text-gray-900" translate>
-          FooBarPricing
-        </a>
-      </div>
-      <div class="px-5 py-2">
-        <a routerLink="contact" class="text-base leading-6 text-gray-500 hover:text-gray-900" translate>
-          FooBarContact
-        </a>
-      </div>
-      <div class="px-5 py-2">
-        <a routerLink="terms" class="text-base leading-6 text-gray-500 hover:text-gray-900" translate>
-          FooBarTerms
-        </a>
-      </div>
-    </nav>
-    <address class="flex flex-wrap justify-center mt-8">
-      <!--      <a href="#" class="text-gray-400 hover:text-gray-500">-->
-      <!--        <span class="sr-only">Facebook</span>-->
-      <!--        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">-->
-      <!--          <path fill-rule="evenodd"-->
-      <!--                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"-->
-      <!--                clip-rule="evenodd"></path>-->
-      <!--        </svg>-->
-      <!--      </a>-->
-      <a href="mailto:internetics@protonmail.com" class="text-gray-400 hover:text-gray-500">
-        <span class="sr-only">ProtonMail</span>
-        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-          <path
-            d="M4 6.926C5.231.305 11.2.5 11.2.5s5.969-.195 7.2 6.425v4.51s-.051.482-1.408 1.462c-.236.17-.537.394-.877.648-1.622 1.208-4.155 3.093-4.915 3.093-.76 0-3.293-1.885-4.915-3.093-.34-.254-.641-.478-.877-.648C4.051 11.918 4 11.435 4 11.435v-4.51zm3.113 0v2.458h8.174V6.926c-.83-3.288-4.087-3.334-4.087-3.334s-3.258.046-4.087 3.334z"></path>
-          <path
-            d="M9.55 17.062c.725.503 1.65.593 1.65.593s.926-.091 1.65-.594c.724-.503 5.55-3.952 5.55-3.952v6.829s-.041.794-.916.794H4.916c-.875 0-.915-.794-.915-.794V13.11s4.826 3.449 5.55 3.951zM120.326 2.93c-.472 0-.881.155-1.201.475a1.612 1.612 0 00-.475 1.18c0 .46.157.861.475 1.18l.006.005c.321.303.728.448 1.195.448.479 0 .894-.143 1.217-.448l.006-.006c.318-.318.475-.718.475-1.18 0-.46-.157-.861-.475-1.18-.322-.321-.739-.474-1.223-.474zM127.533 17.721V3.537l-2.578.308v13.92c0 .84.222 1.538.704 2.053l.007.007c.497.498 1.16.733 1.954.733.62 0 1.193-.14 1.713-.424l.229-.124-.715-1.907-.285.113c-.174.07-.379.108-.62.108-.195 0-.279-.05-.318-.095-.045-.07-.091-.223-.091-.508z"></path>
-        </svg>
-      </a>
-      <a href="https://twitter.com/fangstick" class="text-gray-400 hover:text-gray-500">
-        <span class="sr-only">Twitter</span>
-        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-          <path
-            d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
-        </svg>
-      </a>
-      <a href="https://github.com/PiotrKieltyka" class="text-gray-400 hover:text-gray-500">
-        <span class="sr-only">GitHub</span>
-        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-          <path fill-rule="evenodd"
-                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                clip-rule="evenodd"></path>
-        </svg>
-      </a>
-      <a href="https://dribbble.com/fangstick" class="text-gray-400 hover:text-gray-500">
-        <span class="sr-only">Dribbble</span>
-        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-          <path fill-rule="evenodd"
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
-                clip-rule="evenodd"></path>
-        </svg>
-      </a>
-    </address>
-    <p class="mt-8 text-base leading-6 text-center text-gray-400">
-      Copyright 2021 © <strong>I</strong>n<strong>T</strong>ernetics.Group,
-      {{'Reserved' | translate}},
-      <a class="no-underline hover:text-gray-500" href="https://piotrkieltyka.website">{{'DesignBy' | translate}}</a>.
-    </p>
-  </div>
-</section>
-<a id="back2Top" title="Back to top">
-  <svg width="30" height="30" class="cursor-pointer"
-       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-       onclick="window.scroll({top: 0, left: 0, behavior: 'smooth'})">
-    <path fill="#6B7280"
-          d="M35.5 248l148-148.5c4.7-4.7 12.3-4.7 17 0l148 148.5c4.7 4.7 4.7 12.3 0 17l-7.1 7.1c-4.7 4.7-12.3 4.7-17 0L209 156.1V468c0 6.6-5.4 12-12 12h-10c-6.6 0-12-5.4-12-12V156.1L59.6 272c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.6-4.7-12.2 0-16.9zM0 44v8c0 6.6 5.4 12 12 12h360c6.6 0 12-5.4 12-12v-8c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44z"></path>
-  </svg>
+
+<!-- Back to Top arrow -->
+<a id='back2Top' title='Back to top' data-aos='fade' data-aos-duration='1000' data-aos-delay='500'>
+  <app-arrow-to-top></app-arrow-to-top>
 </a>
