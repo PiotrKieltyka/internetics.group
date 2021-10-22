@@ -1,14 +1,14 @@
 <section
-  class="container flex flex-col pt-4 lg:flex-row lg:pt-8 justify-evenly items-center w-screen mt-4 md:mt-8 md:mb-8">
-  <div class="relative flex justify-center items-center my-8" *ngFor="let person of team" data-aos="fade-up"
-       data-aos-offset="-300">
-    <div id="team-fan"
-         class="absolute z-0 inset-0 shadow-lg transform skew-y-0 -rotate-6 rounded-3xl"
-         style="background: rgb(157,28,82); background: linear-gradient(45deg, var(--color-pink) 0%, var(--color-navy-blue) 45%, var(--color-yellow) 100%);">
+  class='container flex flex-col pt-4 lg:flex-row lg:pt-8 justify-evenly items-center w-screen mt-4 md:mt-8 md:mb-8 overflow-x-hidden'>
+  <div class='relative flex justify-center items-center my-8' *ngFor='let person of team' data-aos='fade-up'
+       data-aos-offset='-300'>
+    <div id='team-fan'
+         class='absolute z-0 inset-0 shadow-lg transform skew-y-0 -rotate-6 rounded-3xl'
+         style='background: rgb(157,28,82); background: linear-gradient(45deg, var(--color-pink) 0%, var(--color-navy-blue) 45%, var(--color-yellow) 100%);'>
     </div>
     <div
-      class="container z-10 mx-auto max-w-sm rounded-2xl overflow-hidden shadow-lg my-2 bg-white">
-      <div class="relative z-10" style="clip-path: polygon(0 0, 100% 0, 100% 88%, 0 calc(80%));">
+      class='container z-10 mx-auto max-w-sm rounded-2xl overflow-hidden shadow-lg my-2 bg-white'>
+      <div class='relative z-10' style='clip-path: polygon(0 0, 100% 0, 100% 88%, 0 calc(80%));'>
         <img class='w-full h-96 object-cover filter brightness-75'
              src='{{person.imageUrl}}'
              alt='Internetic profile image' />
