@@ -21,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ArrowToTopComponent } from './tools/arrow-to-top/arrow-to-top.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ExampleComponent } from './home/examples/example.component';
+import { API_EMAIL_TOKEN } from './tools/api-email-token';
 
 export function translateHttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -57,7 +58,9 @@ export function translateHttpLoaderFactory(http: HttpClient) {
       },
     }),
   ],
-  providers: [],
+  providers: [
+    { provide: API_EMAIL_TOKEN, useValue: 'https://node.piotrkieltyka.website/mail' },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
