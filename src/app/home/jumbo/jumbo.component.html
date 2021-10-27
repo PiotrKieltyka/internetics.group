@@ -1,7 +1,10 @@
 <ng-container *ngFor='let jumboItem of jumboItems; let i = index'>
-  <section id='jumbo' class='container h-3/4 w-auto overflow-x-hidden'>
-    <div class='flex flex-col md:flex-row items-center justify-evenly m-8 h-auto w-auto'>
+  <section id='jumbo' class='container h-1/2 w-auto overflow-x-hidden mt-8'>
+    <div class='flex flex-col md:flex-row items-center justify-evenly m-8 h-auto w-auto'
+         [ngClass]='i === 0 ? "md:py-8" : "py-0"'
+    >
       <div class='flex justify-center items-center md:w-auto border-2 border-white border-2xl rounded-2xl'
+           [ngClass]='i != 0 ? "md:order-2" : "md:order-1"'
            [attr.data-aos]='i != 0 ? "fade-left" : "fade-right"'
            [attr.data-offset]='i != 0 ? "-100" : "0"'
            data-aos-duration='1500'>
@@ -12,6 +15,8 @@
       </div>
       <div
         class='flex flex-col justify-center items-center text-center my-8 w-auto md:w-1/2 md:mx-8'
+        [ngClass]='i != 0 ? "md:order-1" : "md:order-2"'
+        [attr.data-offset]='i != 0 ? "-100" : "0"'
         data-aos='zoom-in' data-aos-duration='1000'
       >
         <p class='text-gray-700 font-medium text-2xl mb-2' translate>{{jumboItem.header}}</p>
