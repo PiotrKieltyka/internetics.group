@@ -15,6 +15,7 @@ export class TeamComponent {
       occupation: 'Fullstack Developer',
       codingFrom: 'Coding from Planet Earth',
       bio: 'PKBio',
+      status: true,
       imageUrl: './assets/team/pk.webp',
       socialNumbers: {
         posts: 64, followers: 341, following: 43,
@@ -27,6 +28,7 @@ export class TeamComponent {
       occupation: 'Frontend Developer',
       codingFrom: 'Coding from Planet Earth',
       bio: 'PSzBio',
+      status: false,
       imageUrl: './assets/team/psz.webp',
       socialNumbers: {
         posts: 23, followers: 237, following: 34,

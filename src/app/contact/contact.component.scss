@@ -23,6 +23,7 @@ input[type=radio]:checked ~ .radio {
 }
 
 .disabled {
+  @apply cursor-not-allowed;
   background: white;
   border: 2px solid rgb(209, 213, 219);
   color: rgb(209, 213, 219);

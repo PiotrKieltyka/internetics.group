@@ -6,6 +6,7 @@ export interface TeamMemberInterface {
   codingFrom: string;
   bio: string;
   imageUrl: string;
+  status: boolean;
   socialNumbers: {
     posts: number;
     followers: number;

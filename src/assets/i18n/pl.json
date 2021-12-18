@@ -50,5 +50,9 @@
   "Reserved": "Wszelkie prawa zastrzeżone",
   "DesignBy": "Design by Piotr Kieltyka",
   "PKBio": "Information Technology Engineer with many years of experience in maintenance and deployment of hardware and software as well as software development. Dedicated developer with a passion for coding, problem solving and learning new technologies. Self-motivated and strongly committed to work.",
-  "PSzBio": "Jestem osobą, która wciąż lubi się doskonalić. Dzięki ukończonym studiom zrozumiałem podstawy programowania i wciąż rozwijam się w tym kierunku, tworząc projekty, które dają mi możliwość doskonalenia swoich kompetencji programistycznych."
+  "PSzBio": "Jest osobą, która wciąż lubi się doskonalić. Dzięki ukończonym studiom zrozumiał podstawy programowania i wciąż rozwija się w tym kierunku, tworząc projekty, które dają mu możliwość doskonalenia swoich kompetencji programistycznych.",
+  "AboutUsP1": "W branży IT działamy już od kilku lat, każdy z nas ma wieloletnie doświadczenie w tworzeniu i utrzymywaniu różnego rodzaju serwisów i usług internetowych. Budujemy strony z najwyższą starannością i dbałością o szczegóły oraz piszemy wysokiej jakości kod przyjazny wyszukiwarkom.",
+  "AboutUsP2": "Budowane przez nas strony nie opierają się na wciąż powtarzających się szablonach - każdy projekt jest tworzony na indywidualne zamówienie. Każde rozwiązanie testujemy na wielu przeglądarkach i urządzeniach różnych producentów.",
+  "AboutUsP3": "Gdy strona jest uruchamiana przy użyciu CMS'a typu WordPress czy Joomla jest ona przeładowana funkcjonalnościami, które w większości nie są wykorzystywane. Nasz kod nie jest przeładowany niepotrzebnymi funkcjami, z których prawdopodobnie nigdy nie skorzystasz.",
+  "AboutUsP4": "W CMS'ach typu WordPress użytkownik takiej strony ściąga więcej megabajtów (co np. zwiększa wykorzystanie pakietów danych komórkowych) przez co strona może działać wolniej. Na stronach tworzonych przez nas powyższe problemy nie istnieją - tworzymy tylko takie funkcjonalności, których strona wymaga. Dzięki temu oszczędzamy czas i energię ponieważ nasze strony ładują się szybciej i działają płynniej."
 }
