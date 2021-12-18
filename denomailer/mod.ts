@@ -1,4 +1,4 @@
-import { Application, oakCors, Router, RouterContext, send, SmtpClient } from './deps.ts';
+import { Application, oakCors, Router, send, SmtpClient } from './deps.ts';
 
 const serverPort = Deno.env.get('MAILSERVER_PORT') as string;
 const serverSecret = Deno.env.get('MAILSERVER_SECRET') as string;
@@ -8,14 +8,14 @@ const router = new Router();
 const client = new SmtpClient();
 
 router
-  .get('/', oakCors(), async (context: RouterContext) => {
+  .get('/', oakCors(), async (context) => {
     await send(context, context.request.url.pathname, {
         root: `${Deno.cwd()}/static`,
         index: 'index.html',
       },
     );
   })
-  .post('/mail', oakCors(), async (context: RouterContext) => {
+  .post('/mail', oakCors(), async (context) => {
     const { content, secret, subject } = await context.request.body().value;
     if (serverSecret === secret) {
       await client.connectTLS({
