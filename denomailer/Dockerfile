@@ -1,6 +1,9 @@
-FROM denoland/deno:alpine-1.13.2@sha256:a513c25cb5af39943bb9fc22937e88880f52dc8db7d3945d2730ba3c0950e989
+FROM denoland/deno:alpine-1.17.1@sha256:1ce0e0fc99bea6f3a66c44020693310d648cf3f9f96f5cd3bbc2add842bdc222
+WORKDIR /deno
+RUN chown deno:deno /deno
 USER deno
-COPY deps.ts .
+COPY --chown=deno:deno deps.ts .
 RUN deno cache deps.ts
-ADD . .
+COPY --chown=deno:deno . .
+RUN deno cache mod.ts
 CMD ["run", "--allow-net", "--allow-env", "--allow-read", "mod.ts"]
