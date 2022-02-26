@@ -102,9 +102,9 @@
           "builder": "@angular-builders/jest:run",
           "options": {
             "tsConfig": "tsconfig.spec.json",
-            "customWebpackConfig": {
-              "path": "webpack.config.js"
-            },
+            "customWebpackConfig": [
+              "webpack.config.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

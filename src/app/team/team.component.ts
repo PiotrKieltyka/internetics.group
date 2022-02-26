@@ -22,6 +22,19 @@ export class TeamComponent {
       },
     },
     {
+      name: 'Darek Betliński',
+      socialTag: '@darekbet',
+      socialUrl: 'https://fotografiabetlinscy.pl',
+      occupation: 'Photographer & Designer',
+      codingFrom: 'Photographs from Planet Earth',
+      bio: 'DBBio',
+      status: true,
+      imageUrl: './assets/team/db.webp',
+      socialNumbers: {
+        posts: 19, followers: 140, following: 25,
+      },
+    },
+    {
       name: 'Piotr Szczechowski',
       socialTag: '@pszczechowskiit',
       socialUrl: 'https://github.com/pszczechowski',

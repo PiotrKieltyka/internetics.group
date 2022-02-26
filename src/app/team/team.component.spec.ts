@@ -1,6 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FooterComponent } from '../footer/footer.component';
 
 import { TeamComponent } from './team.component';
+import { ActivatedRoute } from '@angular/router';
+
+const mockActivatedRoute = {
+  snapshot: {
+    url: [
+      { path: 'team' },
+    ],
+  },
+};
 
 describe('TeamComponent', () => {
   let component: TeamComponent;
@@ -8,7 +18,13 @@ describe('TeamComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TeamComponent],
+      declarations: [
+        TeamComponent,
+        FooterComponent,
+      ],
+      providers: [
+        { provide: ActivatedRoute, useValue: mockActivatedRoute },
+      ],
     }).compileComponents();
   });
 

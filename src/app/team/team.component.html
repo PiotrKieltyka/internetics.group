@@ -1,6 +1,7 @@
 <section
-  class='container flex flex-col pt-4 lg:flex-row lg:pt-8 justify-evenly items-center w-screen mt-4 md:mt-8 md:mb-8 overflow-x-hidden'>
-  <div class='relative flex justify-center items-center my-8' *ngFor='let person of team' data-aos='fade-up'
+  class='container flex flex-col pt-4 lg:flex-row lg:flex-wrap lg:pt-8 justify-evenly items-center w-screen mt-4 md:mt-8 md:mb-8 overflow-x-hidden'>
+  <div class='relative flex justify-center items-center my-8' *ngFor='let person of team'
+       data-aos='fade-up'
        data-aos-offset='-300'>
     <div id='team-fan'
          class='absolute z-0 inset-0 shadow-lg transform skew-y-0 -rotate-6 rounded-3xl'
@@ -53,7 +54,8 @@
       </div>
       <div class='relative flex justify-between items-center flex-row px-6 z-50 -mt-20'>
         <p class='flex items-center text-gray-400'><span [ngClass]="person.status ? 'bg-green-500' : 'bg-red-500'"
-          class='inline-block w-3 h-3 rounded-full mr-2'></span>{{person.status ? 'online' : 'disconnected'}}</p>
+                                                         class='inline-block w-3 h-3 rounded-full mr-2'></span>{{person.status ? 'online' : 'disconnected'}}
+        </p>
         <button
           class='p-4 rounded-full hover:bg-red-500 focus:bg-red-700 transition ease-in duration-200 focus:outline-none'
           style='background-color: #fff; box-shadow: 0 4px 4px 0 rgba(132,132,132, 0.15), 0 0 0 10px #f3f5f9;'>
@@ -68,7 +70,7 @@
         <p class='text-[#9d1c52] text-sm font-light'>{{person.codingFrom}}</p>
       </div>
       <div class='pb-10 flex text-center tracking-wide justify-around text-gray-700'>
-        <p class='w-11/12 h-38'>{{person.bio | translate}}</p>
+        <p class='w-11/12 h-52'>{{person.bio | translate}}</p>
       </div>
       <div class='pb-4 uppercase text-center tracking-wide flex justify-around flex-col sm:flex-row'>
         <div class='posts'>
