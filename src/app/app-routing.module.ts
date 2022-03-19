@@ -15,7 +15,9 @@ const siteRoutes: Routes = [
     component: AboutUsComponent,
     data: { animation: 'AboutUsPage' },
   },
-  { path: 'team', component: TeamComponent, data: { animation: 'TeamPage' } },
+  {
+    path: 'team', component: TeamComponent, data: { animation: 'TeamPage' },
+  },
   { path: 'pricing', component: PricingComponent },
   {
     path: 'contact',
@@ -44,4 +46,5 @@ const siteRoutes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}
