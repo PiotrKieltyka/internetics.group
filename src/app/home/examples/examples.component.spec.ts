@@ -9,10 +9,7 @@ describe('ExamplesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        ExamplesComponent,
-        ExampleComponent,
-      ],
+      declarations: [ExamplesComponent, ExampleComponent],
     }).compileComponents();
   });
 

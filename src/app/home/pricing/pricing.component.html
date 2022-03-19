@@ -1,122 +1,132 @@
-<section id='pricing' class='w-full pt-8 my-16 z-0'>
-  <p class='sticky top-0 bg-gray-100 w-full text-center text-gray-700 text-2xl font-medium py-4 sm:mb-4 z-40'
-     data-aos='fade'
-     translate>
-    PricingPlans</p>
-  <div class='flex flex-col sm:flex-row justify-center mb-6 sm:mb-0 pt-16'>
+<section id="pricing" class="z-0 my-16 w-full pt-8">
+  <p
+    class="sticky top-0 z-40 w-full bg-gray-100 py-4 text-center text-2xl font-medium text-gray-700 sm:mb-4"
+    data-aos="fade"
+    translate
+  >
+    PricingPlans
+  </p>
+  <div class="mb-6 flex flex-col justify-center pt-16 sm:mb-0 sm:flex-row">
     <div
-      class='sm:flex-1 lg:flex-initial lg:w-1/4 rounded-none border-none sm:rounded-t-2xl sm:rounded-tr-none sm:rounded-b-2xl sm:rounded-br-none sm:border-2 bg-cover mt-8 flex flex-col shadow-2xl transform transition-all hover:scale-105 hover:-translate-y-4'
-      style='background-image: url(./assets/pricing-bg.webp); background-position-x: 0; filter: drop-shadow(0px 0px 10px black);'>
-      <div class='p-8 text-3xl font-medium text-center'>
-        <p
-          style='color: var(--color-pink);'>
-          {{plans[0].planName}}</p>
+      class="mt-8 flex transform flex-col rounded-none border-none bg-cover shadow-2xl transition-all hover:-translate-y-4 hover:scale-105 sm:flex-1 sm:rounded-t-2xl sm:rounded-b-2xl sm:rounded-tr-none sm:rounded-br-none sm:border-2 lg:w-1/4 lg:flex-initial"
+      style="
+        background-image: url(./assets/pricing-bg.webp);
+        background-position-x: 0;
+        filter: drop-shadow(0px 0px 10px black);
+      "
+    >
+      <div class="p-8 text-center text-3xl font-medium">
+        <p style="color: var(--color-pink)">
+          {{ plans[0].planName }}
+        </p>
       </div>
-      <div class='border-0 text-base'>
-        <div class='text-center text-gray-100 py-4'>
-          1 Ice Cream
+      <div class="border-0 text-base">
+        <div class="py-4 text-center text-gray-100">1 Ice Cream</div>
+        <div class="border-0 py-4 text-center text-gray-100">No Cones</div>
+        <div class="py-4 text-center text-gray-100">Unlimited toppings</div>
+        <div class="py-4 text-center text-gray-100">
+          {{ 'CMS' | translate }}
         </div>
-        <div class='text-center text-gray-100 border-0 py-4'>
-          No Cones
-        </div>
-        <div class='text-center text-gray-100 py-4'>
-          Unlimited toppings
-        </div>
-        <div class='text-center text-gray-100 py-4'>
-          {{'CMS' | translate}}
-        </div>
-        <div class="text-center text-gray-100 py-4">
-          Analytics
-        </div>
+        <div class="py-4 text-center text-gray-100">Analytics</div>
       </div>
-      <div class="w-full text-center text-gray-100 px-8 pt-8 text-xl mt-auto">
+      <div class="mt-auto w-full px-8 pt-8 text-center text-xl text-gray-100">
         50 PLN
-        <p class="text-gray-500 italic line-through">
-          75 PLN
-        </p>
+        <p class="italic text-gray-500 line-through">75 PLN</p>
         <p class="text-base" translate>monthly</p>
       </div>
-      <div class="text-center mt-8 mb-8 mt-auto">
-        <a [routerLink]="['/contact', plans[0].planId]"
-           class="inline-block bg-gray-800 text-gray-300 px-6 py-2 rounded-full hover:bg-gray-300 hover:text-gray-800 hover:no-underline"
-           translate>GetPlan</a>
+      <div class="mt-8 mb-8 mt-auto text-center">
+        <a
+          [routerLink]="['/contact', plans[0].planId]"
+          class="inline-block rounded-full bg-gray-800 px-6 py-2 text-gray-300 hover:bg-gray-300 hover:text-gray-800 hover:no-underline"
+          translate
+          >GetPlan</a
+        >
       </div>
     </div>
     <div
-      class='flex-1 lg:flex-initial lg:w-1/4 rounded-none border-none sm:rounded-t-xl bg-cover mt-8 sm:-mt-4 z-30 flex flex-col transform transition-all hover:scale-105 hover:-translate-y-4'
-      style='background-image: url(./assets/pricing-bg.webp); background-position-x: 50%; filter: drop-shadow(0px 0px 10px black);'>
-      <div class='w-full p-8 text-3xl font-medium text-center'>
+      class="z-30 mt-8 flex flex-1 transform flex-col rounded-none border-none bg-cover transition-all hover:-translate-y-4 hover:scale-105 sm:-mt-4 sm:rounded-t-xl lg:w-1/4 lg:flex-initial"
+      style="
+        background-image: url(./assets/pricing-bg.webp);
+        background-position-x: 50%;
+        filter: drop-shadow(0px 0px 10px black);
+      "
+    >
+      <div class="w-full p-8 text-center text-3xl font-medium">
+        <p style="color: var(--color-yellow)">
+          {{ plans[1].planName }}
+        </p>
         <p
-          style='color: var(--color-yellow);'>
-          {{plans[1].planName}}</p>
-        <p class='text-sm uppercase text-gray-100 font-light underline py-1' translate=''>MostPopular</p>
+          class="py-1 text-sm font-light uppercase text-gray-100 underline"
+          translate=""
+        >
+          MostPopular
+        </p>
       </div>
-      <div class='w-full border-0 text-base'>
-        <div class='text-center text-gray-100 border-0 py-4'>
-          2 Ice Creams
-        </div>
-        <div class='text-center text-gray-100 border-0 py-4'>
-          25 Cones
-        </div>
-        <div class='text-center text-gray-100 border-0 py-4'>
+      <div class="w-full border-0 text-base">
+        <div class="border-0 py-4 text-center text-gray-100">2 Ice Creams</div>
+        <div class="border-0 py-4 text-center text-gray-100">25 Cones</div>
+        <div class="border-0 py-4 text-center text-gray-100">
           Unlimited toppings
         </div>
-        <div class='text-center text-gray-100 border-0 py-4'>
-          {{'CMS' | translate}}
+        <div class="border-0 py-4 text-center text-gray-100">
+          {{ 'CMS' | translate }}
         </div>
-        <div class="text-center text-gray-100 border-0 py-4">
-          Analytics
-        </div>
+        <div class="border-0 py-4 text-center text-gray-100">Analytics</div>
       </div>
-      <div class="w-full text-center text-gray-100 px-8 pt-8 text-xl mt-auto">
+      <div class="mt-auto w-full px-8 pt-8 text-center text-xl text-gray-100">
         75 PLN
-        <p class="text-gray-500 italic line-through">
-          100 PLN
-        </p>
+        <p class="italic text-gray-500 line-through">100 PLN</p>
         <p class="text-base" translate>monthly</p>
       </div>
-      <div class="text-center mt-8 mb-8 mt-auto">
-        <a [routerLink]="['/contact', plans[1].planId]"
-           class="inline-block bg-gray-800 text-gray-300 px-6 py-2 rounded-full hover:bg-gray-300 hover:text-gray-800 hover:no-underline animate-pulse"
-           translate>GetPlan</a>
+      <div class="mt-8 mb-8 mt-auto text-center">
+        <a
+          [routerLink]="['/contact', plans[1].planId]"
+          class="inline-block animate-pulse rounded-full bg-gray-800 px-6 py-2 text-gray-300 hover:bg-gray-300 hover:text-gray-800 hover:no-underline"
+          translate
+          >GetPlan</a
+        >
       </div>
     </div>
     <div
-      class='flex-1 lg:flex-initial lg:w-1/4 border-none rounded-none border-none sm:rounded-t-2xl sm:rounded-tl-none sm:rounded-br-2xl sm:rounded-bl-none sm:border-2 bg-cover mt-8 flex flex-col shadow-2xl transform transition-all hover:scale-105 hover:-translate-y-4'
-      style='background-image: url(./assets/pricing-bg.webp); background-position-x: 100%; filter: drop-shadow(0px 0px 10px black);'>
-      <div class='p-8 text-3xl font-medium text-center'>
-        <p
-          style='color: var(--color-navy-blue);'>
-          {{plans[2].planName}}</p>
+      class="mt-8 flex flex-1 transform flex-col rounded-none border-none bg-cover shadow-2xl transition-all hover:-translate-y-4 hover:scale-105 sm:rounded-t-2xl sm:rounded-tl-none sm:rounded-br-2xl sm:rounded-bl-none sm:border-2 lg:w-1/4 lg:flex-initial"
+      style="
+        background-image: url(./assets/pricing-bg.webp);
+        background-position-x: 100%;
+        filter: drop-shadow(0px 0px 10px black);
+      "
+    >
+      <div class="p-8 text-center text-3xl font-medium">
+        <p style="color: var(--color-navy-blue)">
+          {{ plans[2].planName }}
+        </p>
       </div>
-      <div class='border-0 text-base'>
-        <div class='text-center text-gray-100 border-0 py-4'>
+      <div class="border-0 text-base">
+        <div class="border-0 py-4 text-center text-gray-100">
           Unlimited Ice Creams
         </div>
-        <div class='text-center text-gray-100 border-0 py-4'>
+        <div class="border-0 py-4 text-center text-gray-100">
           Unlimited Cones
         </div>
-        <div class='text-center text-gray-100 border-0 py-4'>
+        <div class="border-0 py-4 text-center text-gray-100">
           Unlimited toppings
         </div>
-        <div class='text-center text-gray-100 border-0 py-4'>
-          {{'CMS' | translate}}
+        <div class="border-0 py-4 text-center text-gray-100">
+          {{ 'CMS' | translate }}
         </div>
-        <div class="text-center text-gray-100 border-0 py-4">
-          Analytics
-        </div>
+        <div class="border-0 py-4 text-center text-gray-100">Analytics</div>
       </div>
-      <div class="text-center text-gray-100 px-8 pt-8 text-xl mt-auto">
+      <div class="mt-auto px-8 pt-8 text-center text-xl text-gray-100">
         150 PLN
-        <p class="text-gray-500 italic line-through">
-          250 PLN
-        </p>
-        <p class='text-base' translate>monthly</p>
+        <p class="italic text-gray-500 line-through">250 PLN</p>
+        <p class="text-base" translate>monthly</p>
       </div>
-      <div class='text-center mt-8 mb-8 mt-auto'>
-        <a [routerLink]="['/contact', plans[2].planId]"
-           class='inline-block bg-gray-800 text-gray-300 px-6 py-2 rounded-full hover:bg-gray-300 hover:text-gray-800 hover:no-underline'
-           translate>GetPlan</a>
+      <div class="mt-8 mb-8 mt-auto text-center">
+        <a
+          [routerLink]="['/contact', plans[2].planId]"
+          class="inline-block rounded-full bg-gray-800 px-6 py-2 text-gray-300 hover:bg-gray-300 hover:text-gray-800 hover:no-underline"
+          translate
+          >GetPlan</a
+        >
       </div>
     </div>
   </div>

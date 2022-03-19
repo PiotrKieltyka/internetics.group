@@ -10,11 +10,7 @@ describe('TermsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        TermsComponent,
-        ExampleComponent,
-        ExamplesComponent,
-      ],
+      declarations: [TermsComponent, ExampleComponent, ExamplesComponent],
     }).compileComponents();
   });
 

@@ -1,4 +1,4 @@
-input[type=radio]:checked ~ .radio {
+input[type='radio']:checked ~ .radio {
   color: white;
   background-color: var(--color-pink);
   border: none;
@@ -15,10 +15,10 @@ input[type=radio]:checked ~ .radio {
 .enabled {
   border: 2px solid white;
   background: linear-gradient(
-      45deg,
-      var(--color-pink) 0%,
-      var(--color-navy-blue) 50%,
-      var(--color-yellow) 100%
+    45deg,
+    var(--color-pink) 0%,
+    var(--color-navy-blue) 50%,
+    var(--color-yellow) 100%
   );
 }
 
@@ -65,11 +65,11 @@ input[type=radio]:checked ~ .radio {
   }
   85% {
     opacity: 0;
-    transform: translateX(300px) translateY(-150px) scale(.5);
+    transform: translateX(300px) translateY(-150px) scale(0.5);
   }
   90% {
     opacity: 0;
-    transform: translateX(0) translateY(0) scale(.5);
+    transform: translateX(0) translateY(0) scale(0.5);
   }
   100% {
     opacity: 1;

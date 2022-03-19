@@ -18,7 +18,9 @@ export class TeamComponent {
       status: true,
       imageUrl: './assets/team/pk.webp',
       socialNumbers: {
-        posts: 64, followers: 341, following: 43,
+        posts: 64,
+        followers: 341,
+        following: 43,
       },
     },
     {
@@ -31,7 +33,9 @@ export class TeamComponent {
       status: true,
       imageUrl: './assets/team/db.webp',
       socialNumbers: {
-        posts: 19, followers: 140, following: 25,
+        posts: 19,
+        followers: 140,
+        following: 25,
       },
     },
     {
@@ -44,7 +48,9 @@ export class TeamComponent {
       status: false,
       imageUrl: './assets/team/psz.webp',
       socialNumbers: {
-        posts: 23, followers: 237, following: 34,
+        posts: 23,
+        followers: 237,
+        following: 34,
       },
     },
   ];

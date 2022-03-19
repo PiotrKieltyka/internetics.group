@@ -3,14 +3,16 @@ import { ActivatedRoute } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
 
 import { AboutUsComponent } from './about-us.component';
-import { TranslateFakeLoader, TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import {
+  TranslateFakeLoader,
+  TranslateLoader,
+  TranslateModule,
+} from '@ngx-translate/core';
 import { TranslateTestingModule } from 'ngx-translate-testing';
 
 const mockActivatedRoute = {
   snapshot: {
-    url: [
-      { path: 'aboutus' },
-    ],
+    url: [{ path: 'aboutus' }],
   },
 };
 
@@ -20,13 +22,8 @@ describe('AboutUsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        AboutUsComponent,
-        FooterComponent,
-      ],
-      providers: [
-        { provide: ActivatedRoute, useValue: mockActivatedRoute },
-      ],
+      declarations: [AboutUsComponent, FooterComponent],
+      providers: [{ provide: ActivatedRoute, useValue: mockActivatedRoute }],
       imports: [
         TranslateTestingModule.withTranslations({}),
         TranslateModule.forRoot({

@@ -6,9 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 
 const mockActivatedRoute = {
   snapshot: {
-    url: [
-      { path: 'team' },
-    ],
+    url: [{ path: 'team' }],
   },
 };
 
@@ -18,13 +16,8 @@ describe('TeamComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        TeamComponent,
-        FooterComponent,
-      ],
-      providers: [
-        { provide: ActivatedRoute, useValue: mockActivatedRoute },
-      ],
+      declarations: [TeamComponent, FooterComponent],
+      providers: [{ provide: ActivatedRoute, useValue: mockActivatedRoute }],
     }).compileComponents();
   });
 

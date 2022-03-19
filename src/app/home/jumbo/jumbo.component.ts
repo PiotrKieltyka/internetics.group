@@ -25,8 +25,7 @@ export class JumboComponent implements AfterViewInit {
     },
   ];
 
-  constructor(private loadImageService: LoadImageService) {
-  }
+  constructor(private loadImageService: LoadImageService) {}
 
   ngAfterViewInit() {
     const jumboImage0 = document.querySelector(

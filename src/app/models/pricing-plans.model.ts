@@ -1,4 +1,4 @@
-import { PricingPlanInterface } from "./pricing-plan.interface";
+import { PricingPlanInterface } from './pricing-plan.interface';
 
 export const PricingPlans: Array<PricingPlanInterface> = [
   { planId: 0, planName: 'Hobby' },

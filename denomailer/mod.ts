@@ -10,10 +10,9 @@ const client = new SmtpClient();
 router
   .get('/', oakCors(), async (context) => {
     await send(context, context.request.url.pathname, {
-        root: `${Deno.cwd()}/static`,
-        index: 'index.html',
-      },
-    );
+      root: `${Deno.cwd()}/static`,
+      index: 'index.html',
+    });
   })
   .post('/mail', oakCors(), async (context) => {
     const { content, secret, subject } = await context.request.body().value;
@@ -25,7 +24,7 @@ router
         password: Deno.env.get('EMAIL_PASSWORD') as string,
       });
       await client.send({
-        from: Deno.env.get('EMAIL_USERNAME') as string + '@gmail.com',
+        from: (Deno.env.get('EMAIL_USERNAME') as string) + '@gmail.com',
         to: Deno.env.get('EMAIL_RECIPIENT') as string,
         subject: subject,
         content: content,
@@ -43,11 +42,13 @@ router
   .options('/', oakCors());
 
 const app = new Application();
-app.use(oakCors({
-  origin: originsWhiteList,
-  methods: ['GET', 'POST', 'OPTIONS'],
-  optionsSuccessStatus: 200,
-}));
+app.use(
+  oakCors({
+    origin: originsWhiteList,
+    methods: ['GET', 'POST', 'OPTIONS'],
+    optionsSuccessStatus: 200,
+  }),
+);
 app.use(router.routes());
 
 console.info('CORS-enabled web server listening on port ', serverPort);

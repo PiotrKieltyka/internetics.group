@@ -1,4 +1,13 @@
-import { animate, animateChild, group, keyframes, query, style, transition, trigger } from '@angular/animations';
+import {
+  animate,
+  animateChild,
+  group,
+  keyframes,
+  query,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 
 const moveToRight = [
   style({ position: 'relative' }),

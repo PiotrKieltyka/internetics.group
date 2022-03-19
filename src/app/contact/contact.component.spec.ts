@@ -5,9 +5,7 @@ import { ContactComponent } from './contact.component';
 
 const mockActivatedRoute = {
   snapshot: {
-    url: [
-      { path: 'contact' },
-    ],
+    url: [{ path: 'contact' }],
   },
 };
 

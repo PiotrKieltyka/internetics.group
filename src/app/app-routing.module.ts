@@ -10,12 +10,28 @@ import { NotFoundPageComponent } from './404-page/404-page.component';
 
 const siteRoutes: Routes = [
   { path: 'home', component: HomeComponent, data: { animation: 'HomePage' } },
-  { path: 'aboutUs', component: AboutUsComponent, data: { animation: 'AboutUsPage' } },
+  {
+    path: 'aboutUs',
+    component: AboutUsComponent,
+    data: { animation: 'AboutUsPage' },
+  },
   { path: 'team', component: TeamComponent, data: { animation: 'TeamPage' } },
   { path: 'pricing', component: PricingComponent },
-  { path: 'contact', component: ContactComponent, data: { animation: 'ContactPage' } },
-  { path: 'contact/:id', component: ContactComponent, data: { animation: 'ContactPage' } },
-  { path: 'terms', component: TermsComponent, data: { animation: 'TermsPage' } },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    data: { animation: 'ContactPage' },
+  },
+  {
+    path: 'contact/:id',
+    component: ContactComponent,
+    data: { animation: 'ContactPage' },
+  },
+  {
+    path: 'terms',
+    component: TermsComponent,
+    data: { animation: 'TermsPage' },
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: NotFoundPageComponent },
 ];

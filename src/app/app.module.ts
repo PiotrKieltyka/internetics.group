@@ -59,7 +59,10 @@ export function translateHttpLoaderFactory(http: HttpClient) {
     }),
   ],
   providers: [
-    { provide: API_EMAIL_TOKEN, useValue: 'https://node.piotrkieltyka.website/mail' },
+    {
+      provide: API_EMAIL_TOKEN,
+      useValue: 'https://node.piotrkieltyka.website/mail',
+    },
   ],
   bootstrap: [AppComponent],
 })
