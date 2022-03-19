@@ -4,10 +4,11 @@ services:
     container_name: denomailer
     build: .
     restart: always
+    dns:
+      - 1.1.1.1
+      - 9.9.9.9
     networks:
       - node-piotrkieltyka-website
-    ports:
-      - '33032:33032'
     environment:
       EMAIL_USERNAME: ${emailUsername}
       EMAIL_PASSWORD: ${emailPassword}
