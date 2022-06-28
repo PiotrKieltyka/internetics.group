@@ -18,6 +18,7 @@ export class ContactComponent {
     private route: ActivatedRoute,
     private emailService: EmailService,
   ) {
+    console.log('plan', this.plan);
   }
 
   contactForm = new FormGroup({
@@ -42,7 +43,7 @@ export class ContactComponent {
       fromName: `${this.contactForm.get('name')?.value}`,
       replyTo: `${this.contactForm.get('email')?.value}`,
       message: `${this.contactForm.get('message')?.value}`,
-      subscriptionPlan: `${this.pricingPlans[Number(this.contactForm.get('subscription')?.value)].planName}`,
+      subscriptionPlan: `${(this.plan != null) ? this.pricingPlans[Number(this.contactForm.get('subscription')?.value)].planName : null}`,
     });
     this.contactForm.reset();
   }
