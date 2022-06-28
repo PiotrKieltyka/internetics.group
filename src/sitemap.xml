@@ -5,7 +5,22 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://internetics.piotrkieltyka.website/</loc>
-    <lastmod>2022-03-19T10:00:00+00:00</lastmod>
+    <lastmod>2022-06-29T10:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://internetic.piotrkieltyka.website/</loc>
+    <lastmod>2022-06-29T10:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://internetycy.piotrkieltyka.website/</loc>
+    <lastmod>2022-06-29T10:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://internetyk.piotrkieltyka.website/</loc>
+    <lastmod>2022-06-29T10:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
 </urlset>
