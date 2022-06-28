@@ -1,5 +1,6 @@
 export interface EmailInterface {
   secret: string;
-  subject: string;
-  content: string;
+  fromName: string;
+  replyTo: string;
+  message: string;
 }

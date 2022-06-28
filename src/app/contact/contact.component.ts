@@ -17,7 +17,8 @@ export class ContactComponent {
   constructor(
     private route: ActivatedRoute,
     private emailService: EmailService,
-  ) {}
+  ) {
+  }
 
   contactForm = new FormGroup({
     subscription: new FormControl(this.pricingPlans[Number(this.plan)].planId),
@@ -38,12 +39,9 @@ export class ContactComponent {
     );
     this.emailService.sendEmail({
       secret: environment.backendConfig.secret,
-      subject: 'Message from Internetics Website',
-      content: `<p>Message from: ${
-        this.contactForm.get('name')?.value
-      }</p><p>Message: ${
-        this.contactForm.get('message')?.value
-      }</p><p>Reply to: ${this.contactForm.get('email')?.value}</p>`,
+      fromName: `${this.contactForm.get('name')?.value}`,
+      replyTo: `${this.contactForm.get('email')?.value}`,
+      message: `Message from Internetics website: ${this.contactForm.get('message')?.value}`,
     });
     this.contactForm.reset();
   }
