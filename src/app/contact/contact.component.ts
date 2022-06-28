@@ -41,7 +41,8 @@ export class ContactComponent {
       secret: environment.backendConfig.secret,
       fromName: `${this.contactForm.get('name')?.value}`,
       replyTo: `${this.contactForm.get('email')?.value}`,
-      message: `Message from Internetics website: ${this.contactForm.get('message')?.value}`,
+      message: `${this.contactForm.get('message')?.value}`,
+      subscriptionPlan: `${this.contactForm.get('subscription')?.value}`,
     });
     this.contactForm.reset();
   }
