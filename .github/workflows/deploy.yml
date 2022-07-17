@@ -19,6 +19,9 @@ jobs:
       - name: Installing dependencies
         run: npm i
 
+      - name: temporary fix for https://github.com/angular/angular-cli/issues/23275
+        run: rm -rf node_modules/@angular-builders/custom-webpack/node_modules
+
       - name: Add backend config file
         env:
           BACKEND_SECRET: ${{ secrets.BACKEND_SECRET }}
