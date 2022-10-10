@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { PricingPlans } from '../models/pricing-plans.model';
 import { EmailService } from '../services/email.service';
@@ -21,11 +21,11 @@ export class ContactComponent {
     console.log('plan', this.plan);
   }
 
-  contactForm = new UntypedFormGroup({
-    subscription: new UntypedFormControl(this.pricingPlans[Number(this.plan)].planId),
-    name: new UntypedFormControl('', [Validators.required]),
-    email: new UntypedFormControl('', [Validators.email, Validators.required]),
-    message: new UntypedFormControl(''),
+  contactForm = new FormGroup({
+    subscription: new FormControl<number>(this.pricingPlans[Number(this.plan)].planId),
+    name: new FormControl<string>('', [Validators.required]),
+    email: new FormControl<string>('', [Validators.email, Validators.required]),
+    message: new FormControl<string>(''),
   });
 
   submitContactForm(): void {
@@ -49,18 +49,18 @@ export class ContactComponent {
   }
 
   get subscr() {
-    return this.contactForm.get('subscription') as UntypedFormControl;
+    return this.contactForm.get('subscription') as FormControl;
   }
 
   get name() {
-    return this.contactForm.get('name') as UntypedFormControl;
+    return this.contactForm.get('name') as FormControl;
   }
 
   get email() {
-    return this.contactForm.get('email') as UntypedFormControl;
+    return this.contactForm.get('email') as FormControl;
   }
 
   get message() {
-    return this.contactForm.get('message') as UntypedFormControl;
+    return this.contactForm.get('message') as FormControl;
   }
 }
