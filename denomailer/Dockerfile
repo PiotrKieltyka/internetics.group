@@ -1,4 +1,4 @@
-FROM denoland/deno:alpine-1.20.1@sha256:6599d0fae1b057bb710b86b4aaeec7c6939653636f8dfb5c8e9e3f8fa2c0c768
+FROM denoland/deno:alpine-1.28.1@sha256:394ea9890cf9d0d4ffa2e826c3bab8336ee6e7d11b47407c90196697d7885698
 WORKDIR /deno
 RUN chown deno:deno /deno
 USER deno

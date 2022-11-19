@@ -1,7 +1,7 @@
 version: '3'
 services:
-  denomailer:
-    container_name: denomailer
+  node-denomailer:
+    container_name: node-denomailer
     build: .
     restart: always
     dns:
@@ -10,11 +10,13 @@ services:
     networks:
       - node-piotrkieltyka-website
     environment:
+      ACME_CHALLENGE: ${acmeChallenge}
       EMAIL_USERNAME: ${emailUsername}
-      EMAIL_PASSWORD: ${emailPassword}
-      EMAIL_SERVER_URL: ${emailServerUrl}
-      EMAIL_SERVER_PORT: ${emailServerPort}
       EMAIL_RECIPIENT: ${emailRecipient}
+      SERVICE_URL: ${service_url}
+      SERVICE_ID: ${service_id}
+      USER_ID: ${user_id}
+      ACCESS_TOKEN: ${access_token}
       MAILSERVER_PORT: ${mailServerPort}
       MAILSERVER_SECRET: ${mailServerSecret}
       MAILSERVER_ORIGINS: ${mailServerOriginsAllowed}
